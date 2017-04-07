@@ -1,11 +1,13 @@
-# api documentation for  [semver (v5.3.0)](https://github.com/npm/node-semver#readme)  [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-semver.svg)](https://travis-ci.org/npmdoc/node-npmdoc-semver)
+# api documentation for  [semver (v5.3.0)](https://github.com/npm/node-semver#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-semver.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-semver) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-semver.svg)](https://travis-ci.org/npmdoc/node-npmdoc-semver)
 #### The semantic version parser used by npm.
 
 [![NPM](https://nodei.co/npm/semver.png?downloads=true)](https://www.npmjs.com/package/semver)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-semver/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-semver_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-semver/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-semver/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-semver_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-semver/build/apidoc.html)
 
-![package-listing](https://npmdoc.github.io/node-npmdoc-semver/build/screen-capture.npmPackageListing.svg)
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-semver/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-semver/build/screenCapture.npmPackageDependencyTree.svg)
 
 
 
