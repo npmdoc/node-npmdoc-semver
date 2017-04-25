@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/npm/node-semver#readme"
-
-    >semver (v5.3.0)</a>
+    <a href="https://github.com/npm/node-semver#readme">semver (v5.3.0)</a>
 </h1>
 <h4>The semantic version parser used by npm.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.semver">module semver</a><ol>
 
@@ -916,22 +909,22 @@
       return version;
     else
       version = version.version;
-  } else if (typeof version !== &#x27;string&#x27;) {
-    throw new TypeError(&#x27;Invalid Version: &#x27; + version);
+  } else if (typeof version !== 'string') {
+    throw new TypeError('Invalid Version: ' + version);
   }
 
-  if (version.length &#x3e; MAX_LENGTH)
-    throw new TypeError(&#x27;version is longer than &#x27; + MAX_LENGTH + &#x27; characters&#x27;)
+  if (version.length &gt; MAX_LENGTH)
+    throw new TypeError('version is longer than ' + MAX_LENGTH + ' characters')
 
   if (!(this instanceof SemVer))
     return new SemVer(version, loose);
 
-  debug(&#x27;SemVer&#x27;, version, loose);
+  debug('SemVer', version, loose);
   this.loose = loose;
   var m = version.trim().match(loose ? re[LOOSE] : re[FULL]);
 
   if (!m)
-    throw new TypeError(&#x27;Invalid Version: &#x27; + version);
+    throw new TypeError('Invalid Version: ' + version);
 
   this.raw = version;
 
@@ -940,29 +933,29 @@
   this.minor = +m[2];
   this.patch = +m[3];
 
-  if (this.major &#x3e; MAX_SAFE_INTEGER || this.major &#x3c; 0)
-    throw new TypeError(&#x27;Invalid major version&#x27;)
+  if (this.major &gt; MAX_SAFE_INTEGER || this.major &lt; 0)
+    throw new TypeError('Invalid major version')
 
-  if (this.minor &#x3e; MAX_SAFE_INTEGER || this.minor &#x3c; 0)
-    throw new TypeError(&#x27;Invalid minor version&#x27;)
+  if (this.minor &gt; MAX_SAFE_INTEGER || this.minor &lt; 0)
+    throw new TypeError('Invalid minor version')
 
-  if (this.patch &#x3e; MAX_SAFE_INTEGER || this.patch &#x3c; 0)
-    throw new TypeError(&#x27;Invalid patch version&#x27;)
+  if (this.patch &gt; MAX_SAFE_INTEGER || this.patch &lt; 0)
+    throw new TypeError('Invalid patch version')
 
   // numberify any prerelease numeric ids
   if (!m[4])
     this.prerelease = [];
   else
-    this.prerelease = m[4].split(&#x27;.&#x27;).map(function(id) {
+    this.prerelease = m[4].split('.').map(function(id) {
       if (/^[0-9]+$/.test(id)) {
         var num = +id;
-        if (num &#x3e;= 0 &#x26;&#x26; num &#x3c; MAX_SAFE_INTEGER)
+        if (num &gt;= 0 &amp;&amp; num &lt; MAX_SAFE_INTEGER)
           return num;
       }
       return id;
     });
 
-  this.build = m[5] ? m[5].split(&#x27;.&#x27;) : [];
+  this.build = m[5] ? m[5].split('.') : [];
   this.format();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -988,16 +981,16 @@
   if (!(this instanceof Comparator))
     return new Comparator(comp, loose);
 
-  debug(&#x27;comparator&#x27;, comp, loose);
+  debug('comparator', comp, loose);
   this.loose = loose;
   this.parse(comp);
 
   if (this.semver === ANY)
-    this.value = &#x27;&#x27;;
+    this.value = '';
   else
     this.value = this.operator + this.semver.version;
 
-  debug(&#x27;comp&#x27;, this);
+  debug('comp', this);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1012,7 +1005,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Range(range, loose) {
-  if ((range instanceof Range) &#x26;&#x26; range.loose === loose)
+  if ((range instanceof Range) &amp;&amp; range.loose === loose)
     return range;
 
   if (!(this instanceof Range))
@@ -1030,7 +1023,7 @@
   });
 
   if (!this.set.length) {
-    throw new TypeError(&#x27;Invalid SemVer Range: &#x27; + range);
+    throw new TypeError('Invalid SemVer Range: ' + range);
   }
 
   this.format();
@@ -1053,22 +1046,22 @@
       return version;
     else
       version = version.version;
-  } else if (typeof version !== &#x27;string&#x27;) {
-    throw new TypeError(&#x27;Invalid Version: &#x27; + version);
+  } else if (typeof version !== 'string') {
+    throw new TypeError('Invalid Version: ' + version);
   }
 
-  if (version.length &#x3e; MAX_LENGTH)
-    throw new TypeError(&#x27;version is longer than &#x27; + MAX_LENGTH + &#x27; characters&#x27;)
+  if (version.length &gt; MAX_LENGTH)
+    throw new TypeError('version is longer than ' + MAX_LENGTH + ' characters')
 
   if (!(this instanceof SemVer))
     return new SemVer(version, loose);
 
-  debug(&#x27;SemVer&#x27;, version, loose);
+  debug('SemVer', version, loose);
   this.loose = loose;
   var m = version.trim().match(loose ? re[LOOSE] : re[FULL]);
 
   if (!m)
-    throw new TypeError(&#x27;Invalid Version: &#x27; + version);
+    throw new TypeError('Invalid Version: ' + version);
 
   this.raw = version;
 
@@ -1077,29 +1070,29 @@
   this.minor = +m[2];
   this.patch = +m[3];
 
-  if (this.major &#x3e; MAX_SAFE_INTEGER || this.major &#x3c; 0)
-    throw new TypeError(&#x27;Invalid major version&#x27;)
+  if (this.major &gt; MAX_SAFE_INTEGER || this.major &lt; 0)
+    throw new TypeError('Invalid major version')
 
-  if (this.minor &#x3e; MAX_SAFE_INTEGER || this.minor &#x3c; 0)
-    throw new TypeError(&#x27;Invalid minor version&#x27;)
+  if (this.minor &gt; MAX_SAFE_INTEGER || this.minor &lt; 0)
+    throw new TypeError('Invalid minor version')
 
-  if (this.patch &#x3e; MAX_SAFE_INTEGER || this.patch &#x3c; 0)
-    throw new TypeError(&#x27;Invalid patch version&#x27;)
+  if (this.patch &gt; MAX_SAFE_INTEGER || this.patch &lt; 0)
+    throw new TypeError('Invalid patch version')
 
   // numberify any prerelease numeric ids
   if (!m[4])
     this.prerelease = [];
   else
-    this.prerelease = m[4].split(&#x27;.&#x27;).map(function(id) {
+    this.prerelease = m[4].split('.').map(function(id) {
       if (/^[0-9]+$/.test(id)) {
         var num = +id;
-        if (num &#x3e;= 0 &#x26;&#x26; num &#x3c; MAX_SAFE_INTEGER)
+        if (num &gt;= 0 &amp;&amp; num &lt; MAX_SAFE_INTEGER)
           return num;
       }
       return id;
     });
 
-  this.build = m[5] ? m[5].split(&#x27;.&#x27;) : [];
+  this.build = m[5] ? m[5].split('.') : [];
   this.format();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -1115,21 +1108,21 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function clean(version, loose) {
-  var s = parse(version.trim().replace(/^[=v]+/, &#x27;&#x27;), loose);
+  var s = parse(version.trim().replace(/^[=v]+/, ''), loose);
   return s ? s.version : null;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
 $ npm install semver
 $ node
-var semver = require(&#x27;semver&#x27;)
+var semver = require('semver')
 
-semver.valid(&#x27;1.2.3&#x27;) // &#x27;1.2.3&#x27;
-semver.valid(&#x27;a.b.c&#x27;) // null
-semver.<span class="apidocCodeKeywordSpan">clean</span>(&#x27;  =v1.2.3   &#x27;) // &#x27;1.2.3&#x27;
-semver.satisfies(&#x27;1.2.3&#x27;, &#x27;1.x || &#x3e;=2.5.0 || 5.0.0 - 7.2.3&#x27;) // true
-semver.gt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // false
-semver.lt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // true
+semver.valid('1.2.3') // '1.2.3'
+semver.valid('a.b.c') // null
+semver.<span class="apidocCodeKeywordSpan">clean</span>('  =v1.2.3   ') // '1.2.3'
+semver.satisfies('1.2.3', '1.x || &gt;=2.5.0 || 5.0.0 - 7.2.3') // true
+semver.gt('1.2.3', '9.8.7') // false
+semver.lt('1.2.3', '9.8.7') // true
 
 As a command-line utility:
 
@@ -1149,23 +1142,23 @@ $ semver -h
     <li>description and source-code<pre class="apidocCodePre">function cmp(a, op, b, loose) {
   var ret;
   switch (op) {
-    case &#x27;===&#x27;:
-      if (typeof a === &#x27;object&#x27;) a = a.version;
-      if (typeof b === &#x27;object&#x27;) b = b.version;
+    case '===':
+      if (typeof a === 'object') a = a.version;
+      if (typeof b === 'object') b = b.version;
       ret = a === b;
       break;
-    case &#x27;!==&#x27;:
-      if (typeof a === &#x27;object&#x27;) a = a.version;
-      if (typeof b === &#x27;object&#x27;) b = b.version;
+    case '!==':
+      if (typeof a === 'object') a = a.version;
+      if (typeof b === 'object') b = b.version;
       ret = a !== b;
       break;
-    case &#x27;&#x27;: case &#x27;=&#x27;: case &#x27;==&#x27;: ret = eq(a, b, loose); break;
-    case &#x27;!=&#x27;: ret = neq(a, b, loose); break;
-    case &#x27;&#x3e;&#x27;: ret = gt(a, b, loose); break;
-    case &#x27;&#x3e;=&#x27;: ret = gte(a, b, loose); break;
-    case &#x27;&#x3c;&#x27;: ret = lt(a, b, loose); break;
-    case &#x27;&#x3c;=&#x27;: ret = lte(a, b, loose); break;
-    default: throw new TypeError(&#x27;Invalid operator: &#x27; + op);
+    case '': case '=': case '==': ret = eq(a, b, loose); break;
+    case '!=': ret = neq(a, b, loose); break;
+    case '&gt;': ret = gt(a, b, loose); break;
+    case '&gt;=': ret = gte(a, b, loose); break;
+    case '&lt;': ret = lt(a, b, loose); break;
+    case '&lt;=': ret = lte(a, b, loose); break;
+    default: throw new TypeError('Invalid operator: ' + op);
   }
   return ret;
 }</pre></li>
@@ -1215,15 +1208,15 @@ function compareLoose(a, b) {
   var anum = numeric.test(a);
   var bnum = numeric.test(b);
 
-  if (anum &#x26;&#x26; bnum) {
+  if (anum &amp;&amp; bnum) {
     a = +a;
     b = +b;
   }
 
-  return (anum &#x26;&#x26; !bnum) ? -1 :
-         (bnum &#x26;&#x26; !anum) ? 1 :
-         a &#x3c; b ? -1 :
-         a &#x3e; b ? 1 :
+  return (anum &amp;&amp; !bnum) ? -1 :
+         (bnum &amp;&amp; !anum) ? 1 :
+         a &lt; b ? -1 :
+         a &gt; b ? 1 :
          0;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -1261,16 +1254,16 @@ function compareLoose(a, b) {
     var v2 = parse(version2);
     if (v1.prerelease.length || v2.prerelease.length) {
       for (var key in v1) {
-        if (key === &#x27;major&#x27; || key === &#x27;minor&#x27; || key === &#x27;patch&#x27;) {
+        if (key === 'major' || key === 'minor' || key === 'patch') {
           if (v1[key] !== v2[key]) {
-            return &#x27;pre&#x27;+key;
+            return 'pre'+key;
           }
         }
       }
-      return &#x27;prerelease&#x27;;
+      return 'prerelease';
     }
     for (var key in v1) {
-      if (key === &#x27;major&#x27; || key === &#x27;minor&#x27; || key === &#x27;patch&#x27;) {
+      if (key === 'major' || key === 'minor' || key === 'patch') {
         if (v1[key] !== v2[key]) {
           return key;
         }
@@ -1306,18 +1299,18 @@ function compareLoose(a, b) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function gt(a, b, loose) {
-  return compare(a, b, loose) &#x3e; 0;
+  return compare(a, b, loose) &gt; 0;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 $ node
-var semver = require(&#x27;semver&#x27;)
+var semver = require('semver')
 
-semver.valid(&#x27;1.2.3&#x27;) // &#x27;1.2.3&#x27;
-semver.valid(&#x27;a.b.c&#x27;) // null
-semver.clean(&#x27;  =v1.2.3   &#x27;) // &#x27;1.2.3&#x27;
-semver.satisfies(&#x27;1.2.3&#x27;, &#x27;1.x || &#x3e;=2.5.0 || 5.0.0 - 7.2.3&#x27;) // true
-semver.<span class="apidocCodeKeywordSpan">gt</span>(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // false
-semver.lt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // true
+semver.valid('1.2.3') // '1.2.3'
+semver.valid('a.b.c') // null
+semver.clean('  =v1.2.3   ') // '1.2.3'
+semver.satisfies('1.2.3', '1.x || &gt;=2.5.0 || 5.0.0 - 7.2.3') // true
+semver.<span class="apidocCodeKeywordSpan">gt</span>('1.2.3', '9.8.7') // false
+semver.lt('1.2.3', '9.8.7') // true
 
 As a command-line utility:
 
@@ -1337,7 +1330,7 @@ SemVer 5.1.0
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function gte(a, b, loose) {
-  return compare(a, b, loose) &#x3e;= 0;
+  return compare(a, b, loose) &gt;= 0;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1352,7 +1345,7 @@ SemVer 5.1.0
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function gtr(version, range, loose) {
-  return outside(version, range, &#x27;&#x3e;&#x27;, loose);
+  return outside(version, range, '&gt;', loose);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1367,7 +1360,7 @@ SemVer 5.1.0
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function inc(version, release, loose, identifier) {
-  if (typeof(loose) === &#x27;string&#x27;) {
+  if (typeof(loose) === 'string') {
     identifier = loose;
     loose = undefined;
   }
@@ -1386,8 +1379,8 @@ The method `.inc` takes an additional `identifier` string argument that
 will append the value of the string as a prerelease identifier:
 
 ```javascript
-&#x3e; semver.<span class="apidocCodeKeywordSpan">inc</span>(&#x27;1.2.3&#x27;, &#x27;prerelease&#x27;, &#x27;beta&#x27;)
-&#x27;1.2.4-beta.0&#x27;
+&gt; semver.<span class="apidocCodeKeywordSpan">inc</span>('1.2.3', 'prerelease', 'beta')
+'1.2.4-beta.0'
 ```
 
 command-line example:
@@ -1407,17 +1400,17 @@ $ semver 1.2.3 -i prerelease --preid beta
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function lt(a, b, loose) {
-  return compare(a, b, loose) &#x3c; 0;
+  return compare(a, b, loose) &lt; 0;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var semver = require(&#x27;semver&#x27;)
+var semver = require('semver')
 
-semver.valid(&#x27;1.2.3&#x27;) // &#x27;1.2.3&#x27;
-semver.valid(&#x27;a.b.c&#x27;) // null
-semver.clean(&#x27;  =v1.2.3   &#x27;) // &#x27;1.2.3&#x27;
-semver.satisfies(&#x27;1.2.3&#x27;, &#x27;1.x || &#x3e;=2.5.0 || 5.0.0 - 7.2.3&#x27;) // true
-semver.gt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // false
-semver.<span class="apidocCodeKeywordSpan">lt</span>(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // true
+semver.valid('1.2.3') // '1.2.3'
+semver.valid('a.b.c') // null
+semver.clean('  =v1.2.3   ') // '1.2.3'
+semver.satisfies('1.2.3', '1.x || &gt;=2.5.0 || 5.0.0 - 7.2.3') // true
+semver.gt('1.2.3', '9.8.7') // false
+semver.<span class="apidocCodeKeywordSpan">lt</span>('1.2.3', '9.8.7') // true
 
 As a command-line utility:
 
@@ -1437,7 +1430,7 @@ SemVer 5.1.0
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function lte(a, b, loose) {
-  return compare(a, b, loose) &#x3c;= 0;
+  return compare(a, b, loose) &lt;= 0;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1452,7 +1445,7 @@ SemVer 5.1.0
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function ltr(version, range, loose) {
-  return outside(version, range, &#x27;&#x3c;&#x27;, loose);
+  return outside(version, range, '&lt;', loose);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1555,22 +1548,22 @@ SemVer 5.1.0
 
   var gtfn, ltefn, ltfn, comp, ecomp;
   switch (hilo) {
-    case &#x27;&#x3e;&#x27;:
+    case '&gt;':
       gtfn = gt;
       ltefn = lte;
       ltfn = lt;
-      comp = &#x27;&#x3e;&#x27;;
-      ecomp = &#x27;&#x3e;=&#x27;;
+      comp = '&gt;';
+      ecomp = '&gt;=';
       break;
-    case &#x27;&#x3c;&#x27;:
+    case '&lt;':
       gtfn = lt;
       ltefn = gte;
       ltfn = gt;
-      comp = &#x27;&#x3c;&#x27;;
-      ecomp = &#x27;&#x3c;=&#x27;;
+      comp = '&lt;';
+      ecomp = '&lt;=';
       break;
     default:
-      throw new TypeError(&#x27;Must provide a hilo val of &#x22;&#x3c;&#x22; or &#x22;&#x3e;&#x22;&#x27;);
+      throw new TypeError('Must provide a hilo val of "&lt;" or "&gt;"');
   }
 
   // If it satisifes the range it is not outside
@@ -1578,10 +1571,10 @@ SemVer 5.1.0
     return false;
   }
 
-  // From now on, variable terms are as if we&#x27;re in &#x22;gtr&#x22; mode.
-  // but note that everything is flipped for the &#x22;ltr&#x22; function.
+  // From now on, variable terms are as if we're in "gtr" mode.
+  // but note that everything is flipped for the "ltr" function.
 
-  for (var i = 0; i &#x3c; range.set.length; ++i) {
+  for (var i = 0; i &lt; range.set.length; ++i) {
     var comparators = range.set[i];
 
     var high = null;
@@ -1589,7 +1582,7 @@ SemVer 5.1.0
 
     comparators.forEach(function(comparator) {
       if (comparator.semver === ANY) {
-        comparator = new Comparator(&#x27;&#x3e;=0.0.0&#x27;)
+        comparator = new Comparator('&gt;=0.0.0')
       }
       high = high || comparator;
       low = low || comparator;
@@ -1601,17 +1594,17 @@ SemVer 5.1.0
     });
 
     // If the edge version comparator has a operator then our version
-    // isn&#x27;t outside it
+    // isn't outside it
     if (high.operator === comp || high.operator === ecomp) {
       return false;
     }
 
     // If the lowest version comparator has an operator and our version
-    // is less than it then it isn&#x27;t higher than the range
-    if ((!low.operator || low.operator === comp) &#x26;&#x26;
+    // is less than it then it isn't higher than the range
+    if ((!low.operator || low.operator === comp) &amp;&amp;
         ltefn(version, low.semver)) {
       return false;
-    } else if (low.operator === ecomp &#x26;&#x26; ltfn(version, low.semver)) {
+    } else if (low.operator === ecomp &amp;&amp; ltfn(version, low.semver)) {
       return false;
     }
   }
@@ -1633,10 +1626,10 @@ SemVer 5.1.0
   if (version instanceof SemVer)
     return version;
 
-  if (typeof version !== &#x27;string&#x27;)
+  if (typeof version !== 'string')
     return null;
 
-  if (version.length &#x3e; MAX_LENGTH)
+  if (version.length &gt; MAX_LENGTH)
     return null;
 
   var r = loose ? re[LOOSE] : re[FULL];
@@ -1655,16 +1648,16 @@ SemVer 5.1.0
 if (!(this instanceof Comparator))
   return new Comparator(comp, loose);
 
-debug(&#x27;comparator&#x27;, comp, loose);
+debug('comparator', comp, loose);
 this.loose = loose;
 this.<span class="apidocCodeKeywordSpan">parse</span>(comp);
 
 if (this.semver === ANY)
-  this.value = &#x27;&#x27;;
+  this.value = '';
 else
   this.value = this.operator + this.semver.version;
 
-debug(&#x27;comp&#x27;, this);
+debug('comp', this);
 ...</pre></li>
     </ul>
 
@@ -1694,7 +1687,7 @@ debug(&#x27;comp&#x27;, this);
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function prerelease(version, loose) {
   var parsed = parse(version, loose);
-  return (parsed &#x26;&#x26; parsed.prerelease.length) ? parsed.prerelease : null;
+  return (parsed &amp;&amp; parsed.prerelease.length) ? parsed.prerelease : null;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1725,7 +1718,7 @@ function rsort(list, loose) {
 
 exports.gt = gt;
 function gt(a, b, loose) {
-  return compare(a, b, loose) &#x3e; 0;
+  return compare(a, b, loose) &gt; 0;
 }
 ...</pre></li>
     </ul>
@@ -1782,15 +1775,15 @@ function gt(a, b, loose) {
     <li>example usage<pre class="apidocCodePre">...
 $ npm install semver
 $ node
-var semver = require(&#x27;semver&#x27;)
+var semver = require('semver')
 
-semver.valid(&#x27;1.2.3&#x27;) // &#x27;1.2.3&#x27;
-semver.valid(&#x27;a.b.c&#x27;) // null
-semver.clean(&#x27;  =v1.2.3   &#x27;) // &#x27;1.2.3&#x27;
-semver.<span class="apidocCodeKeywordSpan">satisfies</span>(&#x27;1.2.3&#x27;, &#x27;1.x || &#x3e;=2.5.0 || 5.0.0 - 7.2.3&#x27;) //
+semver.valid('1.2.3') // '1.2.3'
+semver.valid('a.b.c') // null
+semver.clean('  =v1.2.3   ') // '1.2.3'
+semver.<span class="apidocCodeKeywordSpan">satisfies</span>('1.2.3', '1.x || &gt;=2.5.0 || 5.0.0 - 7.2.3') //
 true
-semver.gt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // false
-semver.lt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // true
+semver.gt('1.2.3', '9.8.7') // false
+semver.lt('1.2.3', '9.8.7') // true
 
 As a command-line utility:
 
@@ -1815,8 +1808,8 @@ $ semver -h
     <li>example usage<pre class="apidocCodePre">...
 compare strings.
 * `neq(v1, v2)`: `v1 != v2` The opposite of `eq`.
-* `cmp(v1, comparator, v2)`: Pass in a comparison string, and it&#x27;ll call
-the corresponding function above.  `&#x22;===&#x22;` and `&#x22;!==&#x22;` do simple
+* `cmp(v1, comparator, v2)`: Pass in a comparison string, and it'll call
+the corresponding function above.  `"==="` and `"!=="` do simple
 string comparison, but are included for completeness.  Throws if an
 invalid comparison string is provided.
 * `compare(v1, v2)`: Return `0` if `v1 == v2`, or `1` if `v1` is greater, or `-1` if
@@ -1842,7 +1835,7 @@ or null if the versions are the same.
   return new Range(range, loose).set.map(function(comp) {
     return comp.map(function(c) {
       return c.value;
-    }).join(&#x27; &#x27;).trim().split(&#x27; &#x27;);
+    }).join(' ').trim().split(' ');
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -1867,14 +1860,14 @@ or null if the versions are the same.
 
     $ npm install semver
     $ node
-    var semver = require(&#x27;semver&#x27;)
+    var semver = require('semver')
 
-    semver.<span class="apidocCodeKeywordSpan">valid</span>(&#x27;1.2.3&#x27;) // &#x27;1.2.3&#x27;
-    semver.valid(&#x27;a.b.c&#x27;) // null
-    semver.clean(&#x27;  =v1.2.3   &#x27;) // &#x27;1.2.3&#x27;
-    semver.satisfies(&#x27;1.2.3&#x27;, &#x27;1.x || &#x3e;=2.5.0 || 5.0.0 - 7.2.3&#x27;) // true
-    semver.gt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // false
-    semver.lt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // true
+    semver.<span class="apidocCodeKeywordSpan">valid</span>('1.2.3') // '1.2.3'
+    semver.valid('a.b.c') // null
+    semver.clean('  =v1.2.3   ') // '1.2.3'
+    semver.satisfies('1.2.3', '1.x || &gt;=2.5.0 || 5.0.0 - 7.2.3') // true
+    semver.gt('1.2.3', '9.8.7') // false
+    semver.lt('1.2.3', '9.8.7') // true
 
 As a command-line utility:
 ...</pre></li>
@@ -1891,9 +1884,9 @@ As a command-line utility:
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function validRange(range, loose) {
   try {
-    // Return &#x27;*&#x27; instead of &#x27;&#x27; so that truthiness works.
-    // This will throw if it&#x27;s invalid anyway
-    return new Range(range, loose).range || &#x27;*&#x27;;
+    // Return '*' instead of '' so that truthiness works.
+    // This will throw if it's invalid anyway
+    return new Range(range, loose).range || '*';
   } catch (er) {
     return null;
   }
@@ -1938,16 +1931,16 @@ As a command-line utility:
   if (!(this instanceof Comparator))
     return new Comparator(comp, loose);
 
-  debug(&#x27;comparator&#x27;, comp, loose);
+  debug('comparator', comp, loose);
   this.loose = loose;
   this.parse(comp);
 
   if (this.semver === ANY)
-    this.value = &#x27;&#x27;;
+    this.value = '';
   else
     this.value = this.operator + this.semver.version;
 
-  debug(&#x27;comp&#x27;, this);
+  debug('comp', this);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1971,13 +1964,13 @@ As a command-line utility:
   var m = comp.match(r);
 
   if (!m)
-    throw new TypeError(&#x27;Invalid comparator: &#x27; + comp);
+    throw new TypeError('Invalid comparator: ' + comp);
 
   this.operator = m[1];
-  if (this.operator === &#x27;=&#x27;)
-    this.operator = &#x27;&#x27;;
+  if (this.operator === '=')
+    this.operator = '';
 
-  // if it literally is just &#x27;&#x3e;&#x27; or &#x27;&#x27; then allow anything.
+  // if it literally is just '&gt;' or '' then allow anything.
   if (!m[2])
     this.semver = ANY;
   else
@@ -1989,16 +1982,16 @@ As a command-line utility:
 if (!(this instanceof Comparator))
   return new Comparator(comp, loose);
 
-debug(&#x27;comparator&#x27;, comp, loose);
+debug('comparator', comp, loose);
 this.loose = loose;
 this.<span class="apidocCodeKeywordSpan">parse</span>(comp);
 
 if (this.semver === ANY)
-  this.value = &#x27;&#x27;;
+  this.value = '';
 else
   this.value = this.operator + this.semver.version;
 
-debug(&#x27;comp&#x27;, this);
+debug('comp', this);
 ...</pre></li>
     </ul>
 
@@ -2012,12 +2005,12 @@ debug(&#x27;comp&#x27;, this);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">test = function (version) {
-  debug(&#x27;Comparator.test&#x27;, version, this.loose);
+  debug('Comparator.test', version, this.loose);
 
   if (this.semver === ANY)
     return true;
 
-  if (typeof version === &#x27;string&#x27;)
+  if (typeof version === 'string')
     version = new SemVer(version, this.loose);
 
   return cmp(version, this.operator, this.semver, this.loose);
@@ -2027,13 +2020,13 @@ exports = module.exports = SemVer;
 
 // The debug function is excluded entirely from the minified version.
 /* nomin */ var debug;
-/* nomin */ if (typeof process === &#x27;object&#x27; &#x26;&#x26;
-  /* nomin */ process.env &#x26;&#x26;
-  /* nomin */ process.env.NODE_DEBUG &#x26;&#x26;
+/* nomin */ if (typeof process === 'object' &amp;&amp;
+  /* nomin */ process.env &amp;&amp;
+  /* nomin */ process.env.NODE_DEBUG &amp;&amp;
   /* nomin */ /\bsemver\b/i.<span class="apidocCodeKeywordSpan">test</span>(process.env.NODE_DEBUG))
 /* nomin */ debug = function() {
   /* nomin */ var args = Array.prototype.slice.call(arguments, 0);
-  /* nomin */ args.unshift(&#x27;SEMVER&#x27;);
+  /* nomin */ args.unshift('SEMVER');
   /* nomin */ console.log.apply(console, args);
   /* nomin */ };
 /* nomin */ else
@@ -2071,7 +2064,7 @@ exports = module.exports = SemVer;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Range(range, loose) {
-  if ((range instanceof Range) &#x26;&#x26; range.loose === loose)
+  if ((range instanceof Range) &amp;&amp; range.loose === loose)
     return range;
 
   if (!(this instanceof Range))
@@ -2089,7 +2082,7 @@ exports = module.exports = SemVer;
   });
 
   if (!this.set.length) {
-    throw new TypeError(&#x27;Invalid SemVer Range: &#x27; + range);
+    throw new TypeError('Invalid SemVer Range: ' + range);
   }
 
   this.format();
@@ -2113,25 +2106,25 @@ exports = module.exports = SemVer;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">format = function () {
   this.range = this.set.map(function(comps) {
-    return comps.join(&#x27; &#x27;).trim();
-  }).join(&#x27;||&#x27;).trim();
+    return comps.join(' ').trim();
+  }).join('||').trim();
   return this.range;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-      if (num &#x3e;= 0 &#x26;&#x26; num &#x3c; MAX_SAFE_INTEGER)
+      if (num &gt;= 0 &amp;&amp; num &lt; MAX_SAFE_INTEGER)
         return num;
     }
     return id;
   });
 
-this.build = m[5] ? m[5].split(&#x27;.&#x27;) : [];
+this.build = m[5] ? m[5].split('.') : [];
 this.<span class="apidocCodeKeywordSpan">format</span>();
 }
 
 SemVer.prototype.format = function() {
-this.version = this.major + &#x27;.&#x27; + this.minor + &#x27;.&#x27; + this.patch;
+this.version = this.major + '.' + this.minor + '.' + this.patch;
 if (this.prerelease.length)
-  this.version += &#x27;-&#x27; + this.prerelease.join(&#x27;.&#x27;);
+  this.version += '-' + this.prerelease.join('.');
 return this.version;
 ...</pre></li>
     </ul>
@@ -2148,31 +2141,31 @@ return this.version;
     <li>description and source-code<pre class="apidocCodePre">parseRange = function (range) {
   var loose = this.loose;
   range = range.trim();
-  debug(&#x27;range&#x27;, range, loose);
-  // `1.2.3 - 1.2.4` =&#x3e; `&#x3e;=1.2.3 &#x3c;=1.2.4`
+  debug('range', range, loose);
+  // `1.2.3 - 1.2.4` =&gt; `&gt;=1.2.3 &lt;=1.2.4`
   var hr = loose ? re[HYPHENRANGELOOSE] : re[HYPHENRANGE];
   range = range.replace(hr, hyphenReplace);
-  debug(&#x27;hyphen replace&#x27;, range);
-  // `&#x3e; 1.2.3 &#x3c; 1.2.5` =&#x3e; `&#x3e;1.2.3 &#x3c;1.2.5`
+  debug('hyphen replace', range);
+  // `&gt; 1.2.3 &lt; 1.2.5` =&gt; `&gt;1.2.3 &lt;1.2.5`
   range = range.replace(re[COMPARATORTRIM], comparatorTrimReplace);
-  debug(&#x27;comparator trim&#x27;, range, re[COMPARATORTRIM]);
+  debug('comparator trim', range, re[COMPARATORTRIM]);
 
-  // `~ 1.2.3` =&#x3e; `~1.2.3`
+  // `~ 1.2.3` =&gt; `~1.2.3`
   range = range.replace(re[TILDETRIM], tildeTrimReplace);
 
-  // `^ 1.2.3` =&#x3e; `^1.2.3`
+  // `^ 1.2.3` =&gt; `^1.2.3`
   range = range.replace(re[CARETTRIM], caretTrimReplace);
 
   // normalize spaces
-  range = range.split(/\s+/).join(&#x27; &#x27;);
+  range = range.split(/\s+/).join(' ');
 
   // At this point, the range is completely trimmed and
   // ready to be split into comparators.
 
   var compRe = loose ? re[COMPARATORLOOSE] : re[COMPARATOR];
-  var set = range.split(&#x27; &#x27;).map(function(comp) {
+  var set = range.split(' ').map(function(comp) {
     return parseComparator(comp, loose);
-  }).join(&#x27; &#x27;).split(/\s+/);
+  }).join(' ').split(/\s+/);
   if (this.loose) {
     // in loose mode, throw out any that are not valid comparators
     set = set.filter(function(comp) {
@@ -2200,7 +2193,7 @@ this.set = range.split(/\s*\|\|\s*/).map(function(range) {
 });
 
 if (!this.set.length) {
-  throw new TypeError(&#x27;Invalid SemVer Range: &#x27; + range);
+  throw new TypeError('Invalid SemVer Range: ' + range);
 ...</pre></li>
     </ul>
 
@@ -2217,10 +2210,10 @@ if (!this.set.length) {
   if (!version)
     return false;
 
-  if (typeof version === &#x27;string&#x27;)
+  if (typeof version === 'string')
     version = new SemVer(version, this.loose);
 
-  for (var i = 0; i &#x3c; this.set.length; i++) {
+  for (var i = 0; i &lt; this.set.length; i++) {
     if (testSet(this.set[i], version))
       return true;
   }
@@ -2231,13 +2224,13 @@ exports = module.exports = SemVer;
 
 // The debug function is excluded entirely from the minified version.
 /* nomin */ var debug;
-/* nomin */ if (typeof process === &#x27;object&#x27; &#x26;&#x26;
-  /* nomin */ process.env &#x26;&#x26;
-  /* nomin */ process.env.NODE_DEBUG &#x26;&#x26;
+/* nomin */ if (typeof process === 'object' &amp;&amp;
+  /* nomin */ process.env &amp;&amp;
+  /* nomin */ process.env.NODE_DEBUG &amp;&amp;
   /* nomin */ /\bsemver\b/i.<span class="apidocCodeKeywordSpan">test</span>(process.env.NODE_DEBUG))
 /* nomin */ debug = function() {
   /* nomin */ var args = Array.prototype.slice.call(arguments, 0);
-  /* nomin */ args.unshift(&#x27;SEMVER&#x27;);
+  /* nomin */ args.unshift('SEMVER');
   /* nomin */ console.log.apply(console, args);
   /* nomin */ };
 /* nomin */ else
@@ -2280,22 +2273,22 @@ exports = module.exports = SemVer;
       return version;
     else
       version = version.version;
-  } else if (typeof version !== &#x27;string&#x27;) {
-    throw new TypeError(&#x27;Invalid Version: &#x27; + version);
+  } else if (typeof version !== 'string') {
+    throw new TypeError('Invalid Version: ' + version);
   }
 
-  if (version.length &#x3e; MAX_LENGTH)
-    throw new TypeError(&#x27;version is longer than &#x27; + MAX_LENGTH + &#x27; characters&#x27;)
+  if (version.length &gt; MAX_LENGTH)
+    throw new TypeError('version is longer than ' + MAX_LENGTH + ' characters')
 
   if (!(this instanceof SemVer))
     return new SemVer(version, loose);
 
-  debug(&#x27;SemVer&#x27;, version, loose);
+  debug('SemVer', version, loose);
   this.loose = loose;
   var m = version.trim().match(loose ? re[LOOSE] : re[FULL]);
 
   if (!m)
-    throw new TypeError(&#x27;Invalid Version: &#x27; + version);
+    throw new TypeError('Invalid Version: ' + version);
 
   this.raw = version;
 
@@ -2304,29 +2297,29 @@ exports = module.exports = SemVer;
   this.minor = +m[2];
   this.patch = +m[3];
 
-  if (this.major &#x3e; MAX_SAFE_INTEGER || this.major &#x3c; 0)
-    throw new TypeError(&#x27;Invalid major version&#x27;)
+  if (this.major &gt; MAX_SAFE_INTEGER || this.major &lt; 0)
+    throw new TypeError('Invalid major version')
 
-  if (this.minor &#x3e; MAX_SAFE_INTEGER || this.minor &#x3c; 0)
-    throw new TypeError(&#x27;Invalid minor version&#x27;)
+  if (this.minor &gt; MAX_SAFE_INTEGER || this.minor &lt; 0)
+    throw new TypeError('Invalid minor version')
 
-  if (this.patch &#x3e; MAX_SAFE_INTEGER || this.patch &#x3c; 0)
-    throw new TypeError(&#x27;Invalid patch version&#x27;)
+  if (this.patch &gt; MAX_SAFE_INTEGER || this.patch &lt; 0)
+    throw new TypeError('Invalid patch version')
 
   // numberify any prerelease numeric ids
   if (!m[4])
     this.prerelease = [];
   else
-    this.prerelease = m[4].split(&#x27;.&#x27;).map(function(id) {
+    this.prerelease = m[4].split('.').map(function(id) {
       if (/^[0-9]+$/.test(id)) {
         var num = +id;
-        if (num &#x3e;= 0 &#x26;&#x26; num &#x3c; MAX_SAFE_INTEGER)
+        if (num &gt;= 0 &amp;&amp; num &lt; MAX_SAFE_INTEGER)
           return num;
       }
       return id;
     });
 
-  this.build = m[5] ? m[5].split(&#x27;.&#x27;) : [];
+  this.build = m[5] ? m[5].split('.') : [];
   this.format();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -2352,16 +2345,16 @@ exports = module.exports = SemVer;
   if (!(this instanceof Comparator))
     return new Comparator(comp, loose);
 
-  debug(&#x27;comparator&#x27;, comp, loose);
+  debug('comparator', comp, loose);
   this.loose = loose;
   this.parse(comp);
 
   if (this.semver === ANY)
-    this.value = &#x27;&#x27;;
+    this.value = '';
   else
     this.value = this.operator + this.semver.version;
 
-  debug(&#x27;comp&#x27;, this);
+  debug('comp', this);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2376,7 +2369,7 @@ exports = module.exports = SemVer;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Range(range, loose) {
-  if ((range instanceof Range) &#x26;&#x26; range.loose === loose)
+  if ((range instanceof Range) &amp;&amp; range.loose === loose)
     return range;
 
   if (!(this instanceof Range))
@@ -2394,7 +2387,7 @@ exports = module.exports = SemVer;
   });
 
   if (!this.set.length) {
-    throw new TypeError(&#x27;Invalid SemVer Range: &#x27; + range);
+    throw new TypeError('Invalid SemVer Range: ' + range);
   }
 
   this.format();
@@ -2412,21 +2405,21 @@ exports = module.exports = SemVer;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function clean(version, loose) {
-  var s = parse(version.trim().replace(/^[=v]+/, &#x27;&#x27;), loose);
+  var s = parse(version.trim().replace(/^[=v]+/, ''), loose);
   return s ? s.version : null;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
 $ npm install semver
 $ node
-var semver = require(&#x27;semver&#x27;)
+var semver = require('semver')
 
-semver.valid(&#x27;1.2.3&#x27;) // &#x27;1.2.3&#x27;
-semver.valid(&#x27;a.b.c&#x27;) // null
-semver.<span class="apidocCodeKeywordSpan">clean</span>(&#x27;  =v1.2.3   &#x27;) // &#x27;1.2.3&#x27;
-semver.satisfies(&#x27;1.2.3&#x27;, &#x27;1.x || &#x3e;=2.5.0 || 5.0.0 - 7.2.3&#x27;) // true
-semver.gt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // false
-semver.lt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // true
+semver.valid('1.2.3') // '1.2.3'
+semver.valid('a.b.c') // null
+semver.<span class="apidocCodeKeywordSpan">clean</span>('  =v1.2.3   ') // '1.2.3'
+semver.satisfies('1.2.3', '1.x || &gt;=2.5.0 || 5.0.0 - 7.2.3') // true
+semver.gt('1.2.3', '9.8.7') // false
+semver.lt('1.2.3', '9.8.7') // true
 
 As a command-line utility:
 
@@ -2446,23 +2439,23 @@ $ semver -h
     <li>description and source-code<pre class="apidocCodePre">function cmp(a, op, b, loose) {
   var ret;
   switch (op) {
-    case &#x27;===&#x27;:
-      if (typeof a === &#x27;object&#x27;) a = a.version;
-      if (typeof b === &#x27;object&#x27;) b = b.version;
+    case '===':
+      if (typeof a === 'object') a = a.version;
+      if (typeof b === 'object') b = b.version;
       ret = a === b;
       break;
-    case &#x27;!==&#x27;:
-      if (typeof a === &#x27;object&#x27;) a = a.version;
-      if (typeof b === &#x27;object&#x27;) b = b.version;
+    case '!==':
+      if (typeof a === 'object') a = a.version;
+      if (typeof b === 'object') b = b.version;
       ret = a !== b;
       break;
-    case &#x27;&#x27;: case &#x27;=&#x27;: case &#x27;==&#x27;: ret = eq(a, b, loose); break;
-    case &#x27;!=&#x27;: ret = neq(a, b, loose); break;
-    case &#x27;&#x3e;&#x27;: ret = gt(a, b, loose); break;
-    case &#x27;&#x3e;=&#x27;: ret = gte(a, b, loose); break;
-    case &#x27;&#x3c;&#x27;: ret = lt(a, b, loose); break;
-    case &#x27;&#x3c;=&#x27;: ret = lte(a, b, loose); break;
-    default: throw new TypeError(&#x27;Invalid operator: &#x27; + op);
+    case '': case '=': case '==': ret = eq(a, b, loose); break;
+    case '!=': ret = neq(a, b, loose); break;
+    case '&gt;': ret = gt(a, b, loose); break;
+    case '&gt;=': ret = gte(a, b, loose); break;
+    case '&lt;': ret = lt(a, b, loose); break;
+    case '&lt;=': ret = lte(a, b, loose); break;
+    default: throw new TypeError('Invalid operator: ' + op);
   }
   return ret;
 }</pre></li>
@@ -2512,15 +2505,15 @@ function compareLoose(a, b) {
   var anum = numeric.test(a);
   var bnum = numeric.test(b);
 
-  if (anum &#x26;&#x26; bnum) {
+  if (anum &amp;&amp; bnum) {
     a = +a;
     b = +b;
   }
 
-  return (anum &#x26;&#x26; !bnum) ? -1 :
-         (bnum &#x26;&#x26; !anum) ? 1 :
-         a &#x3c; b ? -1 :
-         a &#x3e; b ? 1 :
+  return (anum &amp;&amp; !bnum) ? -1 :
+         (bnum &amp;&amp; !anum) ? 1 :
+         a &lt; b ? -1 :
+         a &gt; b ? 1 :
          0;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -2558,16 +2551,16 @@ function compareLoose(a, b) {
     var v2 = parse(version2);
     if (v1.prerelease.length || v2.prerelease.length) {
       for (var key in v1) {
-        if (key === &#x27;major&#x27; || key === &#x27;minor&#x27; || key === &#x27;patch&#x27;) {
+        if (key === 'major' || key === 'minor' || key === 'patch') {
           if (v1[key] !== v2[key]) {
-            return &#x27;pre&#x27;+key;
+            return 'pre'+key;
           }
         }
       }
-      return &#x27;prerelease&#x27;;
+      return 'prerelease';
     }
     for (var key in v1) {
-      if (key === &#x27;major&#x27; || key === &#x27;minor&#x27; || key === &#x27;patch&#x27;) {
+      if (key === 'major' || key === 'minor' || key === 'patch') {
         if (v1[key] !== v2[key]) {
           return key;
         }
@@ -2603,18 +2596,18 @@ function compareLoose(a, b) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function gt(a, b, loose) {
-  return compare(a, b, loose) &#x3e; 0;
+  return compare(a, b, loose) &gt; 0;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 $ node
-var semver = require(&#x27;semver&#x27;)
+var semver = require('semver')
 
-semver.valid(&#x27;1.2.3&#x27;) // &#x27;1.2.3&#x27;
-semver.valid(&#x27;a.b.c&#x27;) // null
-semver.clean(&#x27;  =v1.2.3   &#x27;) // &#x27;1.2.3&#x27;
-semver.satisfies(&#x27;1.2.3&#x27;, &#x27;1.x || &#x3e;=2.5.0 || 5.0.0 - 7.2.3&#x27;) // true
-semver.<span class="apidocCodeKeywordSpan">gt</span>(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // false
-semver.lt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // true
+semver.valid('1.2.3') // '1.2.3'
+semver.valid('a.b.c') // null
+semver.clean('  =v1.2.3   ') // '1.2.3'
+semver.satisfies('1.2.3', '1.x || &gt;=2.5.0 || 5.0.0 - 7.2.3') // true
+semver.<span class="apidocCodeKeywordSpan">gt</span>('1.2.3', '9.8.7') // false
+semver.lt('1.2.3', '9.8.7') // true
 
 As a command-line utility:
 
@@ -2634,7 +2627,7 @@ SemVer 5.1.0
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function gte(a, b, loose) {
-  return compare(a, b, loose) &#x3e;= 0;
+  return compare(a, b, loose) &gt;= 0;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2649,7 +2642,7 @@ SemVer 5.1.0
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function gtr(version, range, loose) {
-  return outside(version, range, &#x27;&#x3e;&#x27;, loose);
+  return outside(version, range, '&gt;', loose);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2664,7 +2657,7 @@ SemVer 5.1.0
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function inc(version, release, loose, identifier) {
-  if (typeof(loose) === &#x27;string&#x27;) {
+  if (typeof(loose) === 'string') {
     identifier = loose;
     loose = undefined;
   }
@@ -2683,8 +2676,8 @@ The method `.inc` takes an additional `identifier` string argument that
 will append the value of the string as a prerelease identifier:
 
 ```javascript
-&#x3e; semver.<span class="apidocCodeKeywordSpan">inc</span>(&#x27;1.2.3&#x27;, &#x27;prerelease&#x27;, &#x27;beta&#x27;)
-&#x27;1.2.4-beta.0&#x27;
+&gt; semver.<span class="apidocCodeKeywordSpan">inc</span>('1.2.3', 'prerelease', 'beta')
+'1.2.4-beta.0'
 ```
 
 command-line example:
@@ -2704,17 +2697,17 @@ $ semver 1.2.3 -i prerelease --preid beta
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function lt(a, b, loose) {
-  return compare(a, b, loose) &#x3c; 0;
+  return compare(a, b, loose) &lt; 0;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var semver = require(&#x27;semver&#x27;)
+var semver = require('semver')
 
-semver.valid(&#x27;1.2.3&#x27;) // &#x27;1.2.3&#x27;
-semver.valid(&#x27;a.b.c&#x27;) // null
-semver.clean(&#x27;  =v1.2.3   &#x27;) // &#x27;1.2.3&#x27;
-semver.satisfies(&#x27;1.2.3&#x27;, &#x27;1.x || &#x3e;=2.5.0 || 5.0.0 - 7.2.3&#x27;) // true
-semver.gt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // false
-semver.<span class="apidocCodeKeywordSpan">lt</span>(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // true
+semver.valid('1.2.3') // '1.2.3'
+semver.valid('a.b.c') // null
+semver.clean('  =v1.2.3   ') // '1.2.3'
+semver.satisfies('1.2.3', '1.x || &gt;=2.5.0 || 5.0.0 - 7.2.3') // true
+semver.gt('1.2.3', '9.8.7') // false
+semver.<span class="apidocCodeKeywordSpan">lt</span>('1.2.3', '9.8.7') // true
 
 As a command-line utility:
 
@@ -2734,7 +2727,7 @@ SemVer 5.1.0
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function lte(a, b, loose) {
-  return compare(a, b, loose) &#x3c;= 0;
+  return compare(a, b, loose) &lt;= 0;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2749,7 +2742,7 @@ SemVer 5.1.0
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function ltr(version, range, loose) {
-  return outside(version, range, &#x27;&#x3c;&#x27;, loose);
+  return outside(version, range, '&lt;', loose);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2852,22 +2845,22 @@ SemVer 5.1.0
 
   var gtfn, ltefn, ltfn, comp, ecomp;
   switch (hilo) {
-    case &#x27;&#x3e;&#x27;:
+    case '&gt;':
       gtfn = gt;
       ltefn = lte;
       ltfn = lt;
-      comp = &#x27;&#x3e;&#x27;;
-      ecomp = &#x27;&#x3e;=&#x27;;
+      comp = '&gt;';
+      ecomp = '&gt;=';
       break;
-    case &#x27;&#x3c;&#x27;:
+    case '&lt;':
       gtfn = lt;
       ltefn = gte;
       ltfn = gt;
-      comp = &#x27;&#x3c;&#x27;;
-      ecomp = &#x27;&#x3c;=&#x27;;
+      comp = '&lt;';
+      ecomp = '&lt;=';
       break;
     default:
-      throw new TypeError(&#x27;Must provide a hilo val of &#x22;&#x3c;&#x22; or &#x22;&#x3e;&#x22;&#x27;);
+      throw new TypeError('Must provide a hilo val of "&lt;" or "&gt;"');
   }
 
   // If it satisifes the range it is not outside
@@ -2875,10 +2868,10 @@ SemVer 5.1.0
     return false;
   }
 
-  // From now on, variable terms are as if we&#x27;re in &#x22;gtr&#x22; mode.
-  // but note that everything is flipped for the &#x22;ltr&#x22; function.
+  // From now on, variable terms are as if we're in "gtr" mode.
+  // but note that everything is flipped for the "ltr" function.
 
-  for (var i = 0; i &#x3c; range.set.length; ++i) {
+  for (var i = 0; i &lt; range.set.length; ++i) {
     var comparators = range.set[i];
 
     var high = null;
@@ -2886,7 +2879,7 @@ SemVer 5.1.0
 
     comparators.forEach(function(comparator) {
       if (comparator.semver === ANY) {
-        comparator = new Comparator(&#x27;&#x3e;=0.0.0&#x27;)
+        comparator = new Comparator('&gt;=0.0.0')
       }
       high = high || comparator;
       low = low || comparator;
@@ -2898,17 +2891,17 @@ SemVer 5.1.0
     });
 
     // If the edge version comparator has a operator then our version
-    // isn&#x27;t outside it
+    // isn't outside it
     if (high.operator === comp || high.operator === ecomp) {
       return false;
     }
 
     // If the lowest version comparator has an operator and our version
-    // is less than it then it isn&#x27;t higher than the range
-    if ((!low.operator || low.operator === comp) &#x26;&#x26;
+    // is less than it then it isn't higher than the range
+    if ((!low.operator || low.operator === comp) &amp;&amp;
         ltefn(version, low.semver)) {
       return false;
-    } else if (low.operator === ecomp &#x26;&#x26; ltfn(version, low.semver)) {
+    } else if (low.operator === ecomp &amp;&amp; ltfn(version, low.semver)) {
       return false;
     }
   }
@@ -2930,10 +2923,10 @@ SemVer 5.1.0
   if (version instanceof SemVer)
     return version;
 
-  if (typeof version !== &#x27;string&#x27;)
+  if (typeof version !== 'string')
     return null;
 
-  if (version.length &#x3e; MAX_LENGTH)
+  if (version.length &gt; MAX_LENGTH)
     return null;
 
   var r = loose ? re[LOOSE] : re[FULL];
@@ -2952,16 +2945,16 @@ SemVer 5.1.0
 if (!(this instanceof Comparator))
   return new Comparator(comp, loose);
 
-debug(&#x27;comparator&#x27;, comp, loose);
+debug('comparator', comp, loose);
 this.loose = loose;
 this.<span class="apidocCodeKeywordSpan">parse</span>(comp);
 
 if (this.semver === ANY)
-  this.value = &#x27;&#x27;;
+  this.value = '';
 else
   this.value = this.operator + this.semver.version;
 
-debug(&#x27;comp&#x27;, this);
+debug('comp', this);
 ...</pre></li>
     </ul>
 
@@ -2991,7 +2984,7 @@ debug(&#x27;comp&#x27;, this);
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function prerelease(version, loose) {
   var parsed = parse(version, loose);
-  return (parsed &#x26;&#x26; parsed.prerelease.length) ? parsed.prerelease : null;
+  return (parsed &amp;&amp; parsed.prerelease.length) ? parsed.prerelease : null;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3022,7 +3015,7 @@ function rsort(list, loose) {
 
 exports.gt = gt;
 function gt(a, b, loose) {
-  return compare(a, b, loose) &#x3e; 0;
+  return compare(a, b, loose) &gt; 0;
 }
 ...</pre></li>
     </ul>
@@ -3079,15 +3072,15 @@ function gt(a, b, loose) {
     <li>example usage<pre class="apidocCodePre">...
 $ npm install semver
 $ node
-var semver = require(&#x27;semver&#x27;)
+var semver = require('semver')
 
-semver.valid(&#x27;1.2.3&#x27;) // &#x27;1.2.3&#x27;
-semver.valid(&#x27;a.b.c&#x27;) // null
-semver.clean(&#x27;  =v1.2.3   &#x27;) // &#x27;1.2.3&#x27;
-semver.<span class="apidocCodeKeywordSpan">satisfies</span>(&#x27;1.2.3&#x27;, &#x27;1.x || &#x3e;=2.5.0 || 5.0.0 - 7.2.3&#x27;) //
+semver.valid('1.2.3') // '1.2.3'
+semver.valid('a.b.c') // null
+semver.clean('  =v1.2.3   ') // '1.2.3'
+semver.<span class="apidocCodeKeywordSpan">satisfies</span>('1.2.3', '1.x || &gt;=2.5.0 || 5.0.0 - 7.2.3') //
 true
-semver.gt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // false
-semver.lt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // true
+semver.gt('1.2.3', '9.8.7') // false
+semver.lt('1.2.3', '9.8.7') // true
 
 As a command-line utility:
 
@@ -3112,8 +3105,8 @@ $ semver -h
     <li>example usage<pre class="apidocCodePre">...
 compare strings.
 * `neq(v1, v2)`: `v1 != v2` The opposite of `eq`.
-* `cmp(v1, comparator, v2)`: Pass in a comparison string, and it&#x27;ll call
-the corresponding function above.  `&#x22;===&#x22;` and `&#x22;!==&#x22;` do simple
+* `cmp(v1, comparator, v2)`: Pass in a comparison string, and it'll call
+the corresponding function above.  `"==="` and `"!=="` do simple
 string comparison, but are included for completeness.  Throws if an
 invalid comparison string is provided.
 * `compare(v1, v2)`: Return `0` if `v1 == v2`, or `1` if `v1` is greater, or `-1` if
@@ -3139,7 +3132,7 @@ or null if the versions are the same.
   return new Range(range, loose).set.map(function(comp) {
     return comp.map(function(c) {
       return c.value;
-    }).join(&#x27; &#x27;).trim().split(&#x27; &#x27;);
+    }).join(' ').trim().split(' ');
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -3164,14 +3157,14 @@ or null if the versions are the same.
 
     $ npm install semver
     $ node
-    var semver = require(&#x27;semver&#x27;)
+    var semver = require('semver')
 
-    semver.<span class="apidocCodeKeywordSpan">valid</span>(&#x27;1.2.3&#x27;) // &#x27;1.2.3&#x27;
-    semver.valid(&#x27;a.b.c&#x27;) // null
-    semver.clean(&#x27;  =v1.2.3   &#x27;) // &#x27;1.2.3&#x27;
-    semver.satisfies(&#x27;1.2.3&#x27;, &#x27;1.x || &#x3e;=2.5.0 || 5.0.0 - 7.2.3&#x27;) // true
-    semver.gt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // false
-    semver.lt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // true
+    semver.<span class="apidocCodeKeywordSpan">valid</span>('1.2.3') // '1.2.3'
+    semver.valid('a.b.c') // null
+    semver.clean('  =v1.2.3   ') // '1.2.3'
+    semver.satisfies('1.2.3', '1.x || &gt;=2.5.0 || 5.0.0 - 7.2.3') // true
+    semver.gt('1.2.3', '9.8.7') // false
+    semver.lt('1.2.3', '9.8.7') // true
 
 As a command-line utility:
 ...</pre></li>
@@ -3188,9 +3181,9 @@ As a command-line utility:
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function validRange(range, loose) {
   try {
-    // Return &#x27;*&#x27; instead of &#x27;&#x27; so that truthiness works.
-    // This will throw if it&#x27;s invalid anyway
-    return new Range(range, loose).range || &#x27;*&#x27;;
+    // Return '*' instead of '' so that truthiness works.
+    // This will throw if it's invalid anyway
+    return new Range(range, loose).range || '*';
   } catch (er) {
     return null;
   }
@@ -3219,7 +3212,7 @@ As a command-line utility:
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">compare = function (other) {
-  debug(&#x27;SemVer.compare&#x27;, this.version, this.loose, other);
+  debug('SemVer.compare', this.version, this.loose, other);
   if (!(other instanceof SemVer))
     other = new SemVer(other, this.loose);
 
@@ -3264,7 +3257,7 @@ function compareLoose(a, b) {
 };
 
 SemVer.prototype.compare = function(other) {
-debug(&#x27;SemVer.compare&#x27;, this.version, this.loose, other);
+debug('SemVer.compare', this.version, this.loose, other);
 if (!(other instanceof SemVer))
   other = new SemVer(other, this.loose);
 
@@ -3292,20 +3285,20 @@ return compareIdentifiers(this.major, other.major) ||
   if (!(other instanceof SemVer))
     other = new SemVer(other, this.loose);
 
-  // NOT having a prerelease is &#x3e; having one
-  if (this.prerelease.length &#x26;&#x26; !other.prerelease.length)
+  // NOT having a prerelease is &gt; having one
+  if (this.prerelease.length &amp;&amp; !other.prerelease.length)
     return -1;
-  else if (!this.prerelease.length &#x26;&#x26; other.prerelease.length)
+  else if (!this.prerelease.length &amp;&amp; other.prerelease.length)
     return 1;
-  else if (!this.prerelease.length &#x26;&#x26; !other.prerelease.length)
+  else if (!this.prerelease.length &amp;&amp; !other.prerelease.length)
     return 0;
 
   var i = 0;
   do {
     var a = this.prerelease[i];
     var b = other.prerelease[i];
-    debug(&#x27;prerelease compare&#x27;, i, a, b);
-    if (a === undefined &#x26;&#x26; b === undefined)
+    debug('prerelease compare', i, a, b);
+    if (a === undefined &amp;&amp; b === undefined)
       return 0;
     else if (b === undefined)
       return 1;
@@ -3321,7 +3314,7 @@ return compareIdentifiers(this.major, other.major) ||
 };
 
 SemVer.prototype.compare = function(other) {
-debug(&#x27;SemVer.compare&#x27;, this.version, this.loose, other);
+debug('SemVer.compare', this.version, this.loose, other);
 if (!(other instanceof SemVer))
   other = new SemVer(other, this.loose);
 
@@ -3346,26 +3339,26 @@ return compareIdentifiers(this.major, other.major) ||
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">format = function () {
-  this.version = this.major + &#x27;.&#x27; + this.minor + &#x27;.&#x27; + this.patch;
+  this.version = this.major + '.' + this.minor + '.' + this.patch;
   if (this.prerelease.length)
-    this.version += &#x27;-&#x27; + this.prerelease.join(&#x27;.&#x27;);
+    this.version += '-' + this.prerelease.join('.');
   return this.version;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-      if (num &#x3e;= 0 &#x26;&#x26; num &#x3c; MAX_SAFE_INTEGER)
+      if (num &gt;= 0 &amp;&amp; num &lt; MAX_SAFE_INTEGER)
         return num;
     }
     return id;
   });
 
-this.build = m[5] ? m[5].split(&#x27;.&#x27;) : [];
+this.build = m[5] ? m[5].split('.') : [];
 this.<span class="apidocCodeKeywordSpan">format</span>();
 }
 
 SemVer.prototype.format = function() {
-this.version = this.major + &#x27;.&#x27; + this.minor + &#x27;.&#x27; + this.patch;
+this.version = this.major + '.' + this.minor + '.' + this.patch;
 if (this.prerelease.length)
-  this.version += &#x27;-&#x27; + this.prerelease.join(&#x27;.&#x27;);
+  this.version += '-' + this.prerelease.join('.');
 return this.version;
 ...</pre></li>
     </ul>
@@ -3381,36 +3374,36 @@ return this.version;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">inc = function (release, identifier) {
   switch (release) {
-    case &#x27;premajor&#x27;:
+    case 'premajor':
       this.prerelease.length = 0;
       this.patch = 0;
       this.minor = 0;
       this.major++;
-      this.inc(&#x27;pre&#x27;, identifier);
+      this.inc('pre', identifier);
       break;
-    case &#x27;preminor&#x27;:
+    case 'preminor':
       this.prerelease.length = 0;
       this.patch = 0;
       this.minor++;
-      this.inc(&#x27;pre&#x27;, identifier);
+      this.inc('pre', identifier);
       break;
-    case &#x27;prepatch&#x27;:
+    case 'prepatch':
       // If this is already a prerelease, it will bump to the next version
       // drop any prereleases that might already exist, since they are not
       // relevant at this point.
       this.prerelease.length = 0;
-      this.inc(&#x27;patch&#x27;, identifier);
-      this.inc(&#x27;pre&#x27;, identifier);
+      this.inc('patch', identifier);
+      this.inc('pre', identifier);
       break;
     // If the input is a non-prerelease version, this acts the same as
     // prepatch.
-    case &#x27;prerelease&#x27;:
+    case 'prerelease':
       if (this.prerelease.length === 0)
-        this.inc(&#x27;patch&#x27;, identifier);
-      this.inc(&#x27;pre&#x27;, identifier);
+        this.inc('patch', identifier);
+      this.inc('pre', identifier);
       break;
 
-    case &#x27;major&#x27;:
+    case 'major':
       // If this is a pre-major version, bump up to the same major version.
       // Otherwise increment major.
       // 1.0.0-5 bumps to 1.0.0
@@ -3421,7 +3414,7 @@ return this.version;
       this.patch = 0;
       this.prerelease = [];
       break;
-    case &#x27;minor&#x27;:
+    case 'minor':
       // If this is a pre-minor version, bump up to the same minor version.
       // Otherwise increment minor.
       // 1.2.0-5 bumps to 1.2.0
@@ -3431,7 +3424,7 @@ return this.version;
       this.patch = 0;
       this.prerelease = [];
       break;
-    case &#x27;patch&#x27;:
+    case 'patch':
       // If this is not a pre-release version, it will increment the patch.
       // If it is a pre-release it will bump up to the same patch version.
       // 1.2.0-5 patches to 1.2.0
@@ -3440,20 +3433,20 @@ return this.version;
         this.patch++;
       this.prerelease = [];
       break;
-    // This probably shouldn&#x27;t be used publicly.
-    // 1.0.0 &#x22;pre&#x22; would become 1.0.0-0 which is the wrong direction.
-    case &#x27;pre&#x27;:
+    // This probably shouldn't be used publicly.
+    // 1.0.0 "pre" would become 1.0.0-0 which is the wrong direction.
+    case 'pre':
       if (this.prerelease.length === 0)
         this.prerelease = [0];
       else {
         var i = this.prerelease.length;
-        while (--i &#x3e;= 0) {
-          if (typeof this.prerelease[i] === &#x27;number&#x27;) {
+        while (--i &gt;= 0) {
+          if (typeof this.prerelease[i] === 'number') {
             this.prerelease[i]++;
             i = -2;
           }
         }
-        if (i === -1) // didn&#x27;t increment anything
+        if (i === -1) // didn't increment anything
           this.prerelease.push(0);
       }
       if (identifier) {
@@ -3468,7 +3461,7 @@ return this.version;
       break;
 
     default:
-      throw new Error(&#x27;invalid increment argument: &#x27; + release);
+      throw new Error('invalid increment argument: ' + release);
   }
   this.format();
   this.raw = this.version;
@@ -3482,8 +3475,8 @@ The method `.inc` takes an additional `identifier` string argument that
 will append the value of the string as a prerelease identifier:
 
 ```javascript
-&#x3e; semver.<span class="apidocCodeKeywordSpan">inc</span>(&#x27;1.2.3&#x27;, &#x27;prerelease&#x27;, &#x27;beta&#x27;)
-&#x27;1.2.4-beta.0&#x27;
+&gt; semver.<span class="apidocCodeKeywordSpan">inc</span>('1.2.3', 'prerelease', 'beta')
+'1.2.4-beta.0'
 ```
 
 command-line example:
@@ -3517,3 +3510,4 @@ $ semver 1.2.3 -i prerelease --preid beta
     ]
 </div>
 </div>
+</body></html>

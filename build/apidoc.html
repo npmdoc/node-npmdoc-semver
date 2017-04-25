@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.semver.semver">
+            function <span class="apidocSignatureSpan"></span>semver
+            <span class="apidocSignatureSpan">(version, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.semver.Comparator">
             function <span class="apidocSignatureSpan">semver.</span>Comparator
             <span class="apidocSignatureSpan">(comp, loose)</span>
@@ -381,6 +390,12 @@
 
         <li>
 
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">semver.</span>SemVer.prototype</span>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">semver.</span>re</span>
 
         </li>
@@ -496,10 +511,463 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.semver.SemVer">module semver.SemVer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.SemVer">
+            function <span class="apidocSignatureSpan">semver.</span>SemVer
+            <span class="apidocSignatureSpan">(version, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.Comparator">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>Comparator
+            <span class="apidocSignatureSpan">(comp, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.Range">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>Range
+            <span class="apidocSignatureSpan">(range, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.clean">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>clean
+            <span class="apidocSignatureSpan">(version, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.cmp">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>cmp
+            <span class="apidocSignatureSpan">(a, op, b, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.compare">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>compare
+            <span class="apidocSignatureSpan">(a, b, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.compareIdentifiers">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>compareIdentifiers
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.compareLoose">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>compareLoose
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.diff">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>diff
+            <span class="apidocSignatureSpan">(version1, version2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.eq">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>eq
+            <span class="apidocSignatureSpan">(a, b, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.gt">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>gt
+            <span class="apidocSignatureSpan">(a, b, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.gte">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>gte
+            <span class="apidocSignatureSpan">(a, b, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.gtr">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>gtr
+            <span class="apidocSignatureSpan">(version, range, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.inc">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>inc
+            <span class="apidocSignatureSpan">(version, release, loose, identifier)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.lt">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>lt
+            <span class="apidocSignatureSpan">(a, b, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.lte">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>lte
+            <span class="apidocSignatureSpan">(a, b, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.ltr">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>ltr
+            <span class="apidocSignatureSpan">(version, range, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.major">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>major
+            <span class="apidocSignatureSpan">(a, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.maxSatisfying">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>maxSatisfying
+            <span class="apidocSignatureSpan">(versions, range, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.minSatisfying">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>minSatisfying
+            <span class="apidocSignatureSpan">(versions, range, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.minor">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>minor
+            <span class="apidocSignatureSpan">(a, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.neq">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>neq
+            <span class="apidocSignatureSpan">(a, b, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.outside">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>outside
+            <span class="apidocSignatureSpan">(version, range, hilo, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.parse">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>parse
+            <span class="apidocSignatureSpan">(version, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.patch">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>patch
+            <span class="apidocSignatureSpan">(a, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.prerelease">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>prerelease
+            <span class="apidocSignatureSpan">(version, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.rcompare">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>rcompare
+            <span class="apidocSignatureSpan">(a, b, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.rcompareIdentifiers">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>rcompareIdentifiers
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.rsort">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>rsort
+            <span class="apidocSignatureSpan">(list, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.satisfies">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>satisfies
+            <span class="apidocSignatureSpan">(version, range, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.sort">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>sort
+            <span class="apidocSignatureSpan">(list, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.toComparators">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>toComparators
+            <span class="apidocSignatureSpan">(range, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.valid">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>valid
+            <span class="apidocSignatureSpan">(version, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.validRange">
+            function <span class="apidocSignatureSpan">semver.SemVer.</span>validRange
+            <span class="apidocSignatureSpan">(range, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">semver.SemVer.</span>re</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">semver.SemVer.</span>src</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">semver.SemVer.</span>SEMVER_SPEC_VERSION</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.semver.SemVer.prototype">module semver.SemVer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.prototype.compare">
+            function <span class="apidocSignatureSpan">semver.SemVer.prototype.</span>compare
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.prototype.compareMain">
+            function <span class="apidocSignatureSpan">semver.SemVer.prototype.</span>compareMain
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.prototype.comparePre">
+            function <span class="apidocSignatureSpan">semver.SemVer.prototype.</span>comparePre
+            <span class="apidocSignatureSpan">(other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.prototype.format">
+            function <span class="apidocSignatureSpan">semver.SemVer.prototype.</span>format
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.prototype.inc">
+            function <span class="apidocSignatureSpan">semver.SemVer.prototype.</span>inc
+            <span class="apidocSignatureSpan">(release, identifier)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.semver.SemVer.prototype.toString">
+            function <span class="apidocSignatureSpan">semver.SemVer.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.semver" id="apidoc.module.semver">module semver</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.semver.semver" id="apidoc.element.semver.semver">
+        function <span class="apidocSignatureSpan"></span>semver
+        <span class="apidocSignatureSpan">(version, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SemVer(version, loose) {
+  if (version instanceof SemVer) {
+    if (version.loose === loose)
+      return version;
+    else
+      version = version.version;
+  } else if (typeof version !== &#x27;string&#x27;) {
+    throw new TypeError(&#x27;Invalid Version: &#x27; + version);
+  }
+
+  if (version.length &#x3e; MAX_LENGTH)
+    throw new TypeError(&#x27;version is longer than &#x27; + MAX_LENGTH + &#x27; characters&#x27;)
+
+  if (!(this instanceof SemVer))
+    return new SemVer(version, loose);
+
+  debug(&#x27;SemVer&#x27;, version, loose);
+  this.loose = loose;
+  var m = version.trim().match(loose ? re[LOOSE] : re[FULL]);
+
+  if (!m)
+    throw new TypeError(&#x27;Invalid Version: &#x27; + version);
+
+  this.raw = version;
+
+  // these are actually numbers
+  this.major = +m[1];
+  this.minor = +m[2];
+  this.patch = +m[3];
+
+  if (this.major &#x3e; MAX_SAFE_INTEGER || this.major &#x3c; 0)
+    throw new TypeError(&#x27;Invalid major version&#x27;)
+
+  if (this.minor &#x3e; MAX_SAFE_INTEGER || this.minor &#x3c; 0)
+    throw new TypeError(&#x27;Invalid minor version&#x27;)
+
+  if (this.patch &#x3e; MAX_SAFE_INTEGER || this.patch &#x3c; 0)
+    throw new TypeError(&#x27;Invalid patch version&#x27;)
+
+  // numberify any prerelease numeric ids
+  if (!m[4])
+    this.prerelease = [];
+  else
+    this.prerelease = m[4].split(&#x27;.&#x27;).map(function(id) {
+      if (/^[0-9]+$/.test(id)) {
+        var num = +id;
+        if (num &#x3e;= 0 &#x26;&#x26; num &#x3c; MAX_SAFE_INTEGER)
+          return num;
+      }
+      return id;
+    });
+
+  this.build = m[5] ? m[5].split(&#x27;.&#x27;) : [];
+  this.format();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
@@ -1444,6 +1912,8 @@ As a command-line utility:
 
 
 
+
+
 </div>
 
 <div class="apidocSectionDiv">
@@ -1786,6 +2256,1254 @@ exports = module.exports = SemVer;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">toString = function () {
   return this.range;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.semver.SemVer" id="apidoc.module.semver.SemVer">module semver.SemVer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.SemVer" id="apidoc.element.semver.SemVer.SemVer">
+        function <span class="apidocSignatureSpan">semver.</span>SemVer
+        <span class="apidocSignatureSpan">(version, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SemVer(version, loose) {
+  if (version instanceof SemVer) {
+    if (version.loose === loose)
+      return version;
+    else
+      version = version.version;
+  } else if (typeof version !== &#x27;string&#x27;) {
+    throw new TypeError(&#x27;Invalid Version: &#x27; + version);
+  }
+
+  if (version.length &#x3e; MAX_LENGTH)
+    throw new TypeError(&#x27;version is longer than &#x27; + MAX_LENGTH + &#x27; characters&#x27;)
+
+  if (!(this instanceof SemVer))
+    return new SemVer(version, loose);
+
+  debug(&#x27;SemVer&#x27;, version, loose);
+  this.loose = loose;
+  var m = version.trim().match(loose ? re[LOOSE] : re[FULL]);
+
+  if (!m)
+    throw new TypeError(&#x27;Invalid Version: &#x27; + version);
+
+  this.raw = version;
+
+  // these are actually numbers
+  this.major = +m[1];
+  this.minor = +m[2];
+  this.patch = +m[3];
+
+  if (this.major &#x3e; MAX_SAFE_INTEGER || this.major &#x3c; 0)
+    throw new TypeError(&#x27;Invalid major version&#x27;)
+
+  if (this.minor &#x3e; MAX_SAFE_INTEGER || this.minor &#x3c; 0)
+    throw new TypeError(&#x27;Invalid minor version&#x27;)
+
+  if (this.patch &#x3e; MAX_SAFE_INTEGER || this.patch &#x3c; 0)
+    throw new TypeError(&#x27;Invalid patch version&#x27;)
+
+  // numberify any prerelease numeric ids
+  if (!m[4])
+    this.prerelease = [];
+  else
+    this.prerelease = m[4].split(&#x27;.&#x27;).map(function(id) {
+      if (/^[0-9]+$/.test(id)) {
+        var num = +id;
+        if (num &#x3e;= 0 &#x26;&#x26; num &#x3c; MAX_SAFE_INTEGER)
+          return num;
+      }
+      return id;
+    });
+
+  this.build = m[5] ? m[5].split(&#x27;.&#x27;) : [];
+  this.format();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.Comparator" id="apidoc.element.semver.SemVer.Comparator">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>Comparator
+        <span class="apidocSignatureSpan">(comp, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Comparator(comp, loose) {
+  if (comp instanceof Comparator) {
+    if (comp.loose === loose)
+      return comp;
+    else
+      comp = comp.value;
+  }
+
+  if (!(this instanceof Comparator))
+    return new Comparator(comp, loose);
+
+  debug(&#x27;comparator&#x27;, comp, loose);
+  this.loose = loose;
+  this.parse(comp);
+
+  if (this.semver === ANY)
+    this.value = &#x27;&#x27;;
+  else
+    this.value = this.operator + this.semver.version;
+
+  debug(&#x27;comp&#x27;, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.Range" id="apidoc.element.semver.SemVer.Range">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>Range
+        <span class="apidocSignatureSpan">(range, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Range(range, loose) {
+  if ((range instanceof Range) &#x26;&#x26; range.loose === loose)
+    return range;
+
+  if (!(this instanceof Range))
+    return new Range(range, loose);
+
+  this.loose = loose;
+
+  // First, split based on boolean or ||
+  this.raw = range;
+  this.set = range.split(/\s*\|\|\s*/).map(function(range) {
+    return this.parseRange(range.trim());
+  }, this).filter(function(c) {
+    // throw out any that are not relevant for whatever reason
+    return c.length;
+  });
+
+  if (!this.set.length) {
+    throw new TypeError(&#x27;Invalid SemVer Range: &#x27; + range);
+  }
+
+  this.format();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.clean" id="apidoc.element.semver.SemVer.clean">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>clean
+        <span class="apidocSignatureSpan">(version, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clean(version, loose) {
+  var s = parse(version.trim().replace(/^[=v]+/, &#x27;&#x27;), loose);
+  return s ? s.version : null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+$ npm install semver
+$ node
+var semver = require(&#x27;semver&#x27;)
+
+semver.valid(&#x27;1.2.3&#x27;) // &#x27;1.2.3&#x27;
+semver.valid(&#x27;a.b.c&#x27;) // null
+semver.<span class="apidocCodeKeywordSpan">clean</span>(&#x27;  =v1.2.3   &#x27;) // &#x27;1.2.3&#x27;
+semver.satisfies(&#x27;1.2.3&#x27;, &#x27;1.x || &#x3e;=2.5.0 || 5.0.0 - 7.2.3&#x27;) // true
+semver.gt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // false
+semver.lt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // true
+
+As a command-line utility:
+
+$ semver -h
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.cmp" id="apidoc.element.semver.SemVer.cmp">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>cmp
+        <span class="apidocSignatureSpan">(a, op, b, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function cmp(a, op, b, loose) {
+  var ret;
+  switch (op) {
+    case &#x27;===&#x27;:
+      if (typeof a === &#x27;object&#x27;) a = a.version;
+      if (typeof b === &#x27;object&#x27;) b = b.version;
+      ret = a === b;
+      break;
+    case &#x27;!==&#x27;:
+      if (typeof a === &#x27;object&#x27;) a = a.version;
+      if (typeof b === &#x27;object&#x27;) b = b.version;
+      ret = a !== b;
+      break;
+    case &#x27;&#x27;: case &#x27;=&#x27;: case &#x27;==&#x27;: ret = eq(a, b, loose); break;
+    case &#x27;!=&#x27;: ret = neq(a, b, loose); break;
+    case &#x27;&#x3e;&#x27;: ret = gt(a, b, loose); break;
+    case &#x27;&#x3e;=&#x27;: ret = gte(a, b, loose); break;
+    case &#x27;&#x3c;&#x27;: ret = lt(a, b, loose); break;
+    case &#x27;&#x3c;=&#x27;: ret = lte(a, b, loose); break;
+    default: throw new TypeError(&#x27;Invalid operator: &#x27; + op);
+  }
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.compare" id="apidoc.element.semver.SemVer.compare">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>compare
+        <span class="apidocSignatureSpan">(a, b, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compare(a, b, loose) {
+  return new SemVer(a, loose).compare(b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+exports.patch = patch;
+function patch(a, loose) {
+  return new SemVer(a, loose).patch;
+}
+
+exports.compare = compare;
+function compare(a, b, loose) {
+  return new SemVer(a, loose).<span class="apidocCodeKeywordSpan">compare</span>(b);
+}
+
+exports.compareLoose = compareLoose;
+function compareLoose(a, b) {
+  return compare(a, b, true);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.compareIdentifiers" id="apidoc.element.semver.SemVer.compareIdentifiers">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>compareIdentifiers
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compareIdentifiers(a, b) {
+  var anum = numeric.test(a);
+  var bnum = numeric.test(b);
+
+  if (anum &#x26;&#x26; bnum) {
+    a = +a;
+    b = +b;
+  }
+
+  return (anum &#x26;&#x26; !bnum) ? -1 :
+         (bnum &#x26;&#x26; !anum) ? 1 :
+         a &#x3c; b ? -1 :
+         a &#x3e; b ? 1 :
+         0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.compareLoose" id="apidoc.element.semver.SemVer.compareLoose">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>compareLoose
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compareLoose(a, b) {
+  return compare(a, b, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.diff" id="apidoc.element.semver.SemVer.diff">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>diff
+        <span class="apidocSignatureSpan">(version1, version2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function diff(version1, version2) {
+  if (eq(version1, version2)) {
+    return null;
+  } else {
+    var v1 = parse(version1);
+    var v2 = parse(version2);
+    if (v1.prerelease.length || v2.prerelease.length) {
+      for (var key in v1) {
+        if (key === &#x27;major&#x27; || key === &#x27;minor&#x27; || key === &#x27;patch&#x27;) {
+          if (v1[key] !== v2[key]) {
+            return &#x27;pre&#x27;+key;
+          }
+        }
+      }
+      return &#x27;prerelease&#x27;;
+    }
+    for (var key in v1) {
+      if (key === &#x27;major&#x27; || key === &#x27;minor&#x27; || key === &#x27;patch&#x27;) {
+        if (v1[key] !== v2[key]) {
+          return key;
+        }
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.eq" id="apidoc.element.semver.SemVer.eq">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>eq
+        <span class="apidocSignatureSpan">(a, b, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function eq(a, b, loose) {
+  return compare(a, b, loose) === 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.gt" id="apidoc.element.semver.SemVer.gt">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>gt
+        <span class="apidocSignatureSpan">(a, b, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function gt(a, b, loose) {
+  return compare(a, b, loose) &#x3e; 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+$ node
+var semver = require(&#x27;semver&#x27;)
+
+semver.valid(&#x27;1.2.3&#x27;) // &#x27;1.2.3&#x27;
+semver.valid(&#x27;a.b.c&#x27;) // null
+semver.clean(&#x27;  =v1.2.3   &#x27;) // &#x27;1.2.3&#x27;
+semver.satisfies(&#x27;1.2.3&#x27;, &#x27;1.x || &#x3e;=2.5.0 || 5.0.0 - 7.2.3&#x27;) // true
+semver.<span class="apidocCodeKeywordSpan">gt</span>(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // false
+semver.lt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // true
+
+As a command-line utility:
+
+$ semver -h
+
+SemVer 5.1.0
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.gte" id="apidoc.element.semver.SemVer.gte">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>gte
+        <span class="apidocSignatureSpan">(a, b, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function gte(a, b, loose) {
+  return compare(a, b, loose) &#x3e;= 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.gtr" id="apidoc.element.semver.SemVer.gtr">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>gtr
+        <span class="apidocSignatureSpan">(version, range, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function gtr(version, range, loose) {
+  return outside(version, range, &#x27;&#x3e;&#x27;, loose);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.inc" id="apidoc.element.semver.SemVer.inc">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>inc
+        <span class="apidocSignatureSpan">(version, release, loose, identifier)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function inc(version, release, loose, identifier) {
+  if (typeof(loose) === &#x27;string&#x27;) {
+    identifier = loose;
+    loose = undefined;
+  }
+
+  try {
+    return new SemVer(version, loose).inc(release, identifier).version;
+  } catch (er) {
+    return null;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+#### Prerelease Identifiers
+
+The method `.inc` takes an additional `identifier` string argument that
+will append the value of the string as a prerelease identifier:
+
+```javascript
+&#x3e; semver.<span class="apidocCodeKeywordSpan">inc</span>(&#x27;1.2.3&#x27;, &#x27;prerelease&#x27;, &#x27;beta&#x27;)
+&#x27;1.2.4-beta.0&#x27;
+```
+
+command-line example:
+
+```shell
+$ semver 1.2.3 -i prerelease --preid beta
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.lt" id="apidoc.element.semver.SemVer.lt">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>lt
+        <span class="apidocSignatureSpan">(a, b, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lt(a, b, loose) {
+  return compare(a, b, loose) &#x3c; 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var semver = require(&#x27;semver&#x27;)
+
+semver.valid(&#x27;1.2.3&#x27;) // &#x27;1.2.3&#x27;
+semver.valid(&#x27;a.b.c&#x27;) // null
+semver.clean(&#x27;  =v1.2.3   &#x27;) // &#x27;1.2.3&#x27;
+semver.satisfies(&#x27;1.2.3&#x27;, &#x27;1.x || &#x3e;=2.5.0 || 5.0.0 - 7.2.3&#x27;) // true
+semver.gt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // false
+semver.<span class="apidocCodeKeywordSpan">lt</span>(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // true
+
+As a command-line utility:
+
+$ semver -h
+
+SemVer 5.1.0
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.lte" id="apidoc.element.semver.SemVer.lte">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>lte
+        <span class="apidocSignatureSpan">(a, b, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lte(a, b, loose) {
+  return compare(a, b, loose) &#x3c;= 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.ltr" id="apidoc.element.semver.SemVer.ltr">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>ltr
+        <span class="apidocSignatureSpan">(version, range, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ltr(version, range, loose) {
+  return outside(version, range, &#x27;&#x3c;&#x27;, loose);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.major" id="apidoc.element.semver.SemVer.major">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>major
+        <span class="apidocSignatureSpan">(a, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function major(a, loose) {
+  return new SemVer(a, loose).major;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.maxSatisfying" id="apidoc.element.semver.SemVer.maxSatisfying">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>maxSatisfying
+        <span class="apidocSignatureSpan">(versions, range, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function maxSatisfying(versions, range, loose) {
+  return versions.filter(function(version) {
+    return satisfies(version, range, loose);
+  }).sort(function(a, b) {
+    return rcompare(a, b, loose);
+  })[0] || null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.minSatisfying" id="apidoc.element.semver.SemVer.minSatisfying">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>minSatisfying
+        <span class="apidocSignatureSpan">(versions, range, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function minSatisfying(versions, range, loose) {
+  return versions.filter(function(version) {
+    return satisfies(version, range, loose);
+  }).sort(function(a, b) {
+    return compare(a, b, loose);
+  })[0] || null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.minor" id="apidoc.element.semver.SemVer.minor">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>minor
+        <span class="apidocSignatureSpan">(a, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function minor(a, loose) {
+  return new SemVer(a, loose).minor;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.neq" id="apidoc.element.semver.SemVer.neq">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>neq
+        <span class="apidocSignatureSpan">(a, b, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function neq(a, b, loose) {
+  return compare(a, b, loose) !== 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.outside" id="apidoc.element.semver.SemVer.outside">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>outside
+        <span class="apidocSignatureSpan">(version, range, hilo, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function outside(version, range, hilo, loose) {
+  version = new SemVer(version, loose);
+  range = new Range(range, loose);
+
+  var gtfn, ltefn, ltfn, comp, ecomp;
+  switch (hilo) {
+    case &#x27;&#x3e;&#x27;:
+      gtfn = gt;
+      ltefn = lte;
+      ltfn = lt;
+      comp = &#x27;&#x3e;&#x27;;
+      ecomp = &#x27;&#x3e;=&#x27;;
+      break;
+    case &#x27;&#x3c;&#x27;:
+      gtfn = lt;
+      ltefn = gte;
+      ltfn = gt;
+      comp = &#x27;&#x3c;&#x27;;
+      ecomp = &#x27;&#x3c;=&#x27;;
+      break;
+    default:
+      throw new TypeError(&#x27;Must provide a hilo val of &#x22;&#x3c;&#x22; or &#x22;&#x3e;&#x22;&#x27;);
+  }
+
+  // If it satisifes the range it is not outside
+  if (satisfies(version, range, loose)) {
+    return false;
+  }
+
+  // From now on, variable terms are as if we&#x27;re in &#x22;gtr&#x22; mode.
+  // but note that everything is flipped for the &#x22;ltr&#x22; function.
+
+  for (var i = 0; i &#x3c; range.set.length; ++i) {
+    var comparators = range.set[i];
+
+    var high = null;
+    var low = null;
+
+    comparators.forEach(function(comparator) {
+      if (comparator.semver === ANY) {
+        comparator = new Comparator(&#x27;&#x3e;=0.0.0&#x27;)
+      }
+      high = high || comparator;
+      low = low || comparator;
+      if (gtfn(comparator.semver, high.semver, loose)) {
+        high = comparator;
+      } else if (ltfn(comparator.semver, low.semver, loose)) {
+        low = comparator;
+      }
+    });
+
+    // If the edge version comparator has a operator then our version
+    // isn&#x27;t outside it
+    if (high.operator === comp || high.operator === ecomp) {
+      return false;
+    }
+
+    // If the lowest version comparator has an operator and our version
+    // is less than it then it isn&#x27;t higher than the range
+    if ((!low.operator || low.operator === comp) &#x26;&#x26;
+        ltefn(version, low.semver)) {
+      return false;
+    } else if (low.operator === ecomp &#x26;&#x26; ltfn(version, low.semver)) {
+      return false;
+    }
+  }
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.parse" id="apidoc.element.semver.SemVer.parse">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>parse
+        <span class="apidocSignatureSpan">(version, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(version, loose) {
+  if (version instanceof SemVer)
+    return version;
+
+  if (typeof version !== &#x27;string&#x27;)
+    return null;
+
+  if (version.length &#x3e; MAX_LENGTH)
+    return null;
+
+  var r = loose ? re[LOOSE] : re[FULL];
+  if (!r.test(version))
+    return null;
+
+  try {
+    return new SemVer(version, loose);
+  } catch (er) {
+    return null;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+if (!(this instanceof Comparator))
+  return new Comparator(comp, loose);
+
+debug(&#x27;comparator&#x27;, comp, loose);
+this.loose = loose;
+this.<span class="apidocCodeKeywordSpan">parse</span>(comp);
+
+if (this.semver === ANY)
+  this.value = &#x27;&#x27;;
+else
+  this.value = this.operator + this.semver.version;
+
+debug(&#x27;comp&#x27;, this);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.patch" id="apidoc.element.semver.SemVer.patch">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>patch
+        <span class="apidocSignatureSpan">(a, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function patch(a, loose) {
+  return new SemVer(a, loose).patch;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.prerelease" id="apidoc.element.semver.SemVer.prerelease">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>prerelease
+        <span class="apidocSignatureSpan">(version, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function prerelease(version, loose) {
+  var parsed = parse(version, loose);
+  return (parsed &#x26;&#x26; parsed.prerelease.length) ? parsed.prerelease : null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.rcompare" id="apidoc.element.semver.SemVer.rcompare">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>rcompare
+        <span class="apidocSignatureSpan">(a, b, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rcompare(a, b, loose) {
+  return compare(b, a, loose);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return exports.compare(a, b, loose);
+  });
+}
+
+exports.rsort = rsort;
+function rsort(list, loose) {
+  return list.sort(function(a, b) {
+    return exports.<span class="apidocCodeKeywordSpan">rcompare</span>(a, b, loose);
+  });
+}
+
+exports.gt = gt;
+function gt(a, b, loose) {
+  return compare(a, b, loose) &#x3e; 0;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.rcompareIdentifiers" id="apidoc.element.semver.SemVer.rcompareIdentifiers">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>rcompareIdentifiers
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rcompareIdentifiers(a, b) {
+  return compareIdentifiers(b, a);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.rsort" id="apidoc.element.semver.SemVer.rsort">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>rsort
+        <span class="apidocSignatureSpan">(list, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rsort(list, loose) {
+  return list.sort(function(a, b) {
+    return exports.rcompare(a, b, loose);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.satisfies" id="apidoc.element.semver.SemVer.satisfies">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>satisfies
+        <span class="apidocSignatureSpan">(version, range, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function satisfies(version, range, loose) {
+  try {
+    range = new Range(range, loose);
+  } catch (er) {
+    return false;
+  }
+  return range.test(version);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+$ npm install semver
+$ node
+var semver = require(&#x27;semver&#x27;)
+
+semver.valid(&#x27;1.2.3&#x27;) // &#x27;1.2.3&#x27;
+semver.valid(&#x27;a.b.c&#x27;) // null
+semver.clean(&#x27;  =v1.2.3   &#x27;) // &#x27;1.2.3&#x27;
+semver.<span class="apidocCodeKeywordSpan">satisfies</span>(&#x27;1.2.3&#x27;, &#x27;1.x || &#x3e;=2.5.0 || 5.0.0 - 7.2.3&#x27;) //
+true
+semver.gt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // false
+semver.lt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // true
+
+As a command-line utility:
+
+$ semver -h
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.sort" id="apidoc.element.semver.SemVer.sort">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>sort
+        <span class="apidocSignatureSpan">(list, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sort(list, loose) {
+  return list.sort(function(a, b) {
+    return exports.compare(a, b, loose);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+compare strings.
+* `neq(v1, v2)`: `v1 != v2` The opposite of `eq`.
+* `cmp(v1, comparator, v2)`: Pass in a comparison string, and it&#x27;ll call
+the corresponding function above.  `&#x22;===&#x22;` and `&#x22;!==&#x22;` do simple
+string comparison, but are included for completeness.  Throws if an
+invalid comparison string is provided.
+* `compare(v1, v2)`: Return `0` if `v1 == v2`, or `1` if `v1` is greater, or `-1` if
+`v2` is greater.  Sorts in ascending order if passed to `Array.<span class="apidocCodeKeywordSpan">sort</span>()`.
+* `rcompare(v1, v2)`: The reverse of compare.  Sorts an array of versions
+in descending order when passed to `Array.sort()`.
+* `diff(v1, v2)`: Returns difference between two versions by the release type
+(`major`, `premajor`, `minor`, `preminor`, `patch`, `prepatch`, or `prerelease`),
+or null if the versions are the same.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.toComparators" id="apidoc.element.semver.SemVer.toComparators">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>toComparators
+        <span class="apidocSignatureSpan">(range, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toComparators(range, loose) {
+  return new Range(range, loose).set.map(function(comp) {
+    return comp.map(function(c) {
+      return c.value;
+    }).join(&#x27; &#x27;).trim().split(&#x27; &#x27;);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.valid" id="apidoc.element.semver.SemVer.valid">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>valid
+        <span class="apidocSignatureSpan">(version, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function valid(version, loose) {
+  var v = parse(version, loose);
+  return v ? v.version : null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## Usage
+
+    $ npm install semver
+    $ node
+    var semver = require(&#x27;semver&#x27;)
+
+    semver.<span class="apidocCodeKeywordSpan">valid</span>(&#x27;1.2.3&#x27;) // &#x27;1.2.3&#x27;
+    semver.valid(&#x27;a.b.c&#x27;) // null
+    semver.clean(&#x27;  =v1.2.3   &#x27;) // &#x27;1.2.3&#x27;
+    semver.satisfies(&#x27;1.2.3&#x27;, &#x27;1.x || &#x3e;=2.5.0 || 5.0.0 - 7.2.3&#x27;) // true
+    semver.gt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // false
+    semver.lt(&#x27;1.2.3&#x27;, &#x27;9.8.7&#x27;) // true
+
+As a command-line utility:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.validRange" id="apidoc.element.semver.SemVer.validRange">
+        function <span class="apidocSignatureSpan">semver.SemVer.</span>validRange
+        <span class="apidocSignatureSpan">(range, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validRange(range, loose) {
+  try {
+    // Return &#x27;*&#x27; instead of &#x27;&#x27; so that truthiness works.
+    // This will throw if it&#x27;s invalid anyway
+    return new Range(range, loose).range || &#x27;*&#x27;;
+  } catch (er) {
+    return null;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.semver.SemVer.prototype" id="apidoc.module.semver.SemVer.prototype">module semver.SemVer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.prototype.compare" id="apidoc.element.semver.SemVer.prototype.compare">
+        function <span class="apidocSignatureSpan">semver.SemVer.prototype.</span>compare
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compare = function (other) {
+  debug(&#x27;SemVer.compare&#x27;, this.version, this.loose, other);
+  if (!(other instanceof SemVer))
+    other = new SemVer(other, this.loose);
+
+  return this.compareMain(other) || this.comparePre(other);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+exports.patch = patch;
+function patch(a, loose) {
+  return new SemVer(a, loose).patch;
+}
+
+exports.compare = compare;
+function compare(a, b, loose) {
+  return new SemVer(a, loose).<span class="apidocCodeKeywordSpan">compare</span>(b);
+}
+
+exports.compareLoose = compareLoose;
+function compareLoose(a, b) {
+  return compare(a, b, true);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.prototype.compareMain" id="apidoc.element.semver.SemVer.prototype.compareMain">
+        function <span class="apidocSignatureSpan">semver.SemVer.prototype.</span>compareMain
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compareMain = function (other) {
+  if (!(other instanceof SemVer))
+    other = new SemVer(other, this.loose);
+
+  return compareIdentifiers(this.major, other.major) ||
+         compareIdentifiers(this.minor, other.minor) ||
+         compareIdentifiers(this.patch, other.patch);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+SemVer.prototype.compare = function(other) {
+debug(&#x27;SemVer.compare&#x27;, this.version, this.loose, other);
+if (!(other instanceof SemVer))
+  other = new SemVer(other, this.loose);
+
+return this.<span class="apidocCodeKeywordSpan">compareMain</span>(other) || this.comparePre(other);
+};
+
+SemVer.prototype.compareMain = function(other) {
+if (!(other instanceof SemVer))
+  other = new SemVer(other, this.loose);
+
+return compareIdentifiers(this.major, other.major) ||
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.prototype.comparePre" id="apidoc.element.semver.SemVer.prototype.comparePre">
+        function <span class="apidocSignatureSpan">semver.SemVer.prototype.</span>comparePre
+        <span class="apidocSignatureSpan">(other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">comparePre = function (other) {
+  if (!(other instanceof SemVer))
+    other = new SemVer(other, this.loose);
+
+  // NOT having a prerelease is &#x3e; having one
+  if (this.prerelease.length &#x26;&#x26; !other.prerelease.length)
+    return -1;
+  else if (!this.prerelease.length &#x26;&#x26; other.prerelease.length)
+    return 1;
+  else if (!this.prerelease.length &#x26;&#x26; !other.prerelease.length)
+    return 0;
+
+  var i = 0;
+  do {
+    var a = this.prerelease[i];
+    var b = other.prerelease[i];
+    debug(&#x27;prerelease compare&#x27;, i, a, b);
+    if (a === undefined &#x26;&#x26; b === undefined)
+      return 0;
+    else if (b === undefined)
+      return 1;
+    else if (a === undefined)
+      return -1;
+    else if (a === b)
+      continue;
+    else
+      return compareIdentifiers(a, b);
+  } while (++i);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+SemVer.prototype.compare = function(other) {
+debug(&#x27;SemVer.compare&#x27;, this.version, this.loose, other);
+if (!(other instanceof SemVer))
+  other = new SemVer(other, this.loose);
+
+return this.compareMain(other) || this.<span class="apidocCodeKeywordSpan">comparePre</span>(other);
+};
+
+SemVer.prototype.compareMain = function(other) {
+if (!(other instanceof SemVer))
+  other = new SemVer(other, this.loose);
+
+return compareIdentifiers(this.major, other.major) ||
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.prototype.format" id="apidoc.element.semver.SemVer.prototype.format">
+        function <span class="apidocSignatureSpan">semver.SemVer.prototype.</span>format
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">format = function () {
+  this.version = this.major + &#x27;.&#x27; + this.minor + &#x27;.&#x27; + this.patch;
+  if (this.prerelease.length)
+    this.version += &#x27;-&#x27; + this.prerelease.join(&#x27;.&#x27;);
+  return this.version;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      if (num &#x3e;= 0 &#x26;&#x26; num &#x3c; MAX_SAFE_INTEGER)
+        return num;
+    }
+    return id;
+  });
+
+this.build = m[5] ? m[5].split(&#x27;.&#x27;) : [];
+this.<span class="apidocCodeKeywordSpan">format</span>();
+}
+
+SemVer.prototype.format = function() {
+this.version = this.major + &#x27;.&#x27; + this.minor + &#x27;.&#x27; + this.patch;
+if (this.prerelease.length)
+  this.version += &#x27;-&#x27; + this.prerelease.join(&#x27;.&#x27;);
+return this.version;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.prototype.inc" id="apidoc.element.semver.SemVer.prototype.inc">
+        function <span class="apidocSignatureSpan">semver.SemVer.prototype.</span>inc
+        <span class="apidocSignatureSpan">(release, identifier)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inc = function (release, identifier) {
+  switch (release) {
+    case &#x27;premajor&#x27;:
+      this.prerelease.length = 0;
+      this.patch = 0;
+      this.minor = 0;
+      this.major++;
+      this.inc(&#x27;pre&#x27;, identifier);
+      break;
+    case &#x27;preminor&#x27;:
+      this.prerelease.length = 0;
+      this.patch = 0;
+      this.minor++;
+      this.inc(&#x27;pre&#x27;, identifier);
+      break;
+    case &#x27;prepatch&#x27;:
+      // If this is already a prerelease, it will bump to the next version
+      // drop any prereleases that might already exist, since they are not
+      // relevant at this point.
+      this.prerelease.length = 0;
+      this.inc(&#x27;patch&#x27;, identifier);
+      this.inc(&#x27;pre&#x27;, identifier);
+      break;
+    // If the input is a non-prerelease version, this acts the same as
+    // prepatch.
+    case &#x27;prerelease&#x27;:
+      if (this.prerelease.length === 0)
+        this.inc(&#x27;patch&#x27;, identifier);
+      this.inc(&#x27;pre&#x27;, identifier);
+      break;
+
+    case &#x27;major&#x27;:
+      // If this is a pre-major version, bump up to the same major version.
+      // Otherwise increment major.
+      // 1.0.0-5 bumps to 1.0.0
+      // 1.1.0 bumps to 2.0.0
+      if (this.minor !== 0 || this.patch !== 0 || this.prerelease.length === 0)
+        this.major++;
+      this.minor = 0;
+      this.patch = 0;
+      this.prerelease = [];
+      break;
+    case &#x27;minor&#x27;:
+      // If this is a pre-minor version, bump up to the same minor version.
+      // Otherwise increment minor.
+      // 1.2.0-5 bumps to 1.2.0
+      // 1.2.1 bumps to 1.3.0
+      if (this.patch !== 0 || this.prerelease.length === 0)
+        this.minor++;
+      this.patch = 0;
+      this.prerelease = [];
+      break;
+    case &#x27;patch&#x27;:
+      // If this is not a pre-release version, it will increment the patch.
+      // If it is a pre-release it will bump up to the same patch version.
+      // 1.2.0-5 patches to 1.2.0
+      // 1.2.0 patches to 1.2.1
+      if (this.prerelease.length === 0)
+        this.patch++;
+      this.prerelease = [];
+      break;
+    // This probably shouldn&#x27;t be used publicly.
+    // 1.0.0 &#x22;pre&#x22; would become 1.0.0-0 which is the wrong direction.
+    case &#x27;pre&#x27;:
+      if (this.prerelease.length === 0)
+        this.prerelease = [0];
+      else {
+        var i = this.prerelease.length;
+        while (--i &#x3e;= 0) {
+          if (typeof this.prerelease[i] === &#x27;number&#x27;) {
+            this.prerelease[i]++;
+            i = -2;
+          }
+        }
+        if (i === -1) // didn&#x27;t increment anything
+          this.prerelease.push(0);
+      }
+      if (identifier) {
+        // 1.2.0-beta.1 bumps to 1.2.0-beta.2,
+        // 1.2.0-beta.fooblz or 1.2.0-beta bumps to 1.2.0-beta.0
+        if (this.prerelease[0] === identifier) {
+          if (isNaN(this.prerelease[1]))
+            this.prerelease = [identifier, 0];
+        } else
+          this.prerelease = [identifier, 0];
+      }
+      break;
+
+    default:
+      throw new Error(&#x27;invalid increment argument: &#x27; + release);
+  }
+  this.format();
+  this.raw = this.version;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+#### Prerelease Identifiers
+
+The method `.inc` takes an additional `identifier` string argument that
+will append the value of the string as a prerelease identifier:
+
+```javascript
+&#x3e; semver.<span class="apidocCodeKeywordSpan">inc</span>(&#x27;1.2.3&#x27;, &#x27;prerelease&#x27;, &#x27;beta&#x27;)
+&#x27;1.2.4-beta.0&#x27;
+```
+
+command-line example:
+
+```shell
+$ semver 1.2.3 -i prerelease --preid beta
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.semver.SemVer.prototype.toString" id="apidoc.element.semver.SemVer.prototype.toString">
+        function <span class="apidocSignatureSpan">semver.SemVer.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  return this.version;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
